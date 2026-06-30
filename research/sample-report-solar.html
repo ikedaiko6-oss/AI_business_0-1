@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>太陽光発電所 現地点検レポート（サンプル）</title>
+<style>
+  :root{
+    --ink:#1f2937; --sub:#6b7280; --line:#e5e7eb; --bg:#f8fafc;
+    --brand:#0e7490; --brand-d:#155e75;
+    --ok:#15803d; --okbg:#dcfce7; --warn:#b45309; --warnbg:#fef3c7; --bad:#b91c1c; --badbg:#fee2e2;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;
+       color:var(--ink); background:#e5e7eb; margin:0; padding:24px; line-height:1.55;}
+  .sheet{width:210mm; min-height:297mm; margin:0 auto; background:#fff; padding:14mm 14mm 12mm;
+         box-shadow:0 4px 24px rgba(0,0,0,.15);}
+  /* header */
+  .head{display:flex; justify-content:space-between; align-items:flex-start;
+        border-bottom:3px solid var(--brand); padding-bottom:10px;}
+  .title{font-size:21px; font-weight:800; letter-spacing:.02em;}
+  .title small{display:block; font-size:11px; color:var(--sub); font-weight:600; margin-top:2px;}
+  .logo{text-align:right; font-size:12px; color:var(--brand-d); font-weight:700;}
+  .logo .svc{font-size:15px;}
+  .logo .tag{font-size:10px; color:var(--sub); font-weight:500;}
+  /* meta */
+  .meta{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+        border:1px solid var(--line); margin:12px 0 4px;}
+  .meta div{background:#fff; padding:6px 9px; font-size:11px;}
+  .meta .k{color:var(--sub); font-size:9.5px; display:block; margin-bottom:1px;}
+  .meta .v{font-weight:700;}
+  h2{font-size:13px; margin:16px 0 7px; padding-left:9px; border-left:5px solid var(--brand); color:var(--brand-d);}
+  /* power summary */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+  .kpi{border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:var(--bg);}
+  .kpi .lab{font-size:10px; color:var(--sub);}
+  .kpi .num{font-size:18px; font-weight:800; margin-top:2px;}
+  .kpi .num span{font-size:11px; font-weight:600; color:var(--sub);}
+  .kpi.good .num{color:var(--ok);} .kpi.warn .num{color:var(--warn);}
+  /* table */
+  table{width:100%; border-collapse:collapse; font-size:11px;}
+  th,td{border:1px solid var(--line); padding:5px 8px; text-align:left; vertical-align:top;}
+  th{background:#f1f5f9; font-weight:700; color:#334155;}
+  td.item{font-weight:700; width:24%;}
+  .badge{display:inline-block; font-size:10px; font-weight:800; padding:2px 8px; border-radius:999px; white-space:nowrap;}
+  .b-ok{color:var(--ok); background:var(--okbg);}
+  .b-warn{color:var(--warn); background:var(--warnbg);}
+  .b-bad{color:var(--bad); background:var(--badbg);}
+  /* photos */
+  .photos{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+  .ph{border:1px solid var(--line); border-radius:8px; overflow:hidden;}
+  .ph .img{height:74px; background:repeating-linear-gradient(45deg,#eef2f7,#eef2f7 8px,#e6ebf2 8px,#e6ebf2 16px);
+           display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:10px;}
+  .ph .cap{font-size:9.5px; padding:4px 6px; color:#475569; background:#fff;}
+  /* notes */
+  .note{font-size:11px; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:9px 11px;}
+  .next{font-size:11px;}
+  .next li{margin:3px 0;}
+  .next .tag{display:inline-block; font-size:9px; font-weight:800; padding:1px 6px; border-radius:4px; margin-right:6px;}
+  .t-check{background:#e0f2fe; color:#075985;} .t-pro{background:#fef3c7; color:#92400e;} .t-watch{background:#f3e8ff; color:#6b21a8;}
+  .disc{font-size:9px; color:var(--sub); border-top:1px solid var(--line); margin-top:14px; padding-top:8px;}
+  .foot{display:flex; justify-content:space-between; font-size:10px; color:var(--sub); margin-top:6px;}
+  .stamp{color:#b91c1c; border:1px dashed #b91c1c; border-radius:6px; padding:2px 6px; font-weight:700; font-size:9px;}
+  @media print{ body{background:#fff; padding:0;} .sheet{box-shadow:none; width:auto; min-height:auto;} }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="head">
+    <div class="title">太陽光発電所 現地点検レポート
+      <small>On-site Inspection Report ／ 草刈り・目視点検・空撮記録</small>
+    </div>
+    <div class="logo">
+      <div class="svc">［サービス名（仮）］野立てドック</div>
+      <div class="tag">現場 × AIレポート ／ 春日井市拠点・愛知岐阜三重対応</div>
+      <div class="stamp" style="margin-top:6px;">SAMPLE / 記入例</div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><span class="k">物件名</span><span class="v">春日井市〇〇町 第1発電所</span></div>
+    <div><span class="k">所在地</span><span class="v">愛知県春日井市〇〇町1-2</span></div>
+    <div><span class="k">パネル容量 / 連系</span><span class="v">49.5 kW（低圧）</span></div>
+    <div><span class="k">敷地面積</span><span class="v">約 780 ㎡</span></div>
+    <div><span class="k">点検日 / 天候</span><span class="v">2026-06-28（晴・29℃）</span></div>
+    <div><span class="k">点検区分</span><span class="v">年間ライト（草刈り2回目＋点検）</span></div>
+    <div><span class="k">点検者</span><span class="v">池田</span></div>
+    <div><span class="k">次回予定</span><span class="v">2026-09 下旬</span></div>
+  </div>
+
+  <h2>1. 発電サマリー</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="lab">当月発電量</div><div class="num">5,420 <span>kWh</span></div></div>
+    <div class="kpi"><div class="lab">期待値（推定）</div><div class="num">5,800 <span>kWh</span></div></div>
+    <div class="kpi warn"><div class="lab">達成率</div><div class="num">93 <span>%</span></div></div>
+    <div class="kpi good"><div class="lab">前年同月比</div><div class="num">+2 <span>%</span></div></div>
+  </div>
+  <p style="font-size:10.5px;color:var(--sub);margin:6px 0 0;">
+    所見：達成率93%は概ね健全。わずかな低下は西側パネル下端の雑草の影（草刈り前）と推定。草刈り後の翌月で回復を確認予定。
+  </p>
+
+  <h2>2. 目視点検結果</h2>
+  <table>
+    <tr><th>点検項目</th><th>判定</th><th>所見</th></tr>
+    <tr><td class="item">太陽光パネル</td><td><span class="badge b-ok">良好</span></td><td>割れ・変色・著しい汚れなし。鳥フン数点（発電影響軽微）。</td></tr>
+    <tr><td class="item">架台・基礎</td><td><span class="badge b-ok">良好</span></td><td>傾き・ボルト緩み確認できず。沈下なし。</td></tr>
+    <tr><td class="item">ケーブル・配線</td><td><span class="badge b-warn">要観察</span></td><td>南東端でケーブルの一部が地表に垂れ、草刈り時の損傷リスク。固定を提案。</td></tr>
+    <tr><td class="item">接続箱・PCS外観</td><td><span class="badge b-ok">良好</span></td><td>外観・表示ランプ正常。扉の施錠OK。※内部の電気点検は対象外。</td></tr>
+    <tr><td class="item">フェンス・施錠</td><td><span class="badge b-warn">要観察</span></td><td>北側フェンス基礎が一部浮き。獣・人の侵入余地。補修見積可。</td></tr>
+    <tr><td class="item">除草状況</td><td><span class="badge b-bad">要対応</span></td><td>全面で草丈40–60cm。パネル下端に影。本日 高刈り(10–15cm)で除草実施。</td></tr>
+    <tr><td class="item">獣害・蜂</td><td><span class="badge b-ok">良好</span></td><td>巣・掘り返し痕なし。</td></tr>
+    <tr><td class="item">浸食・水たまり</td><td><span class="badge b-ok">良好</span></td><td>排水良好。法面崩れなし。</td></tr>
+  </table>
+
+  <h2>3. 現地写真・空撮</h2>
+  <div class="photos">
+    <div class="ph"><div class="img">［写真：除草前］</div><div class="cap">草刈り前（草丈40–60cm）</div></div>
+    <div class="ph"><div class="img">［写真：除草後］</div><div class="cap">高刈り後（10–15cm）</div></div>
+    <div class="ph"><div class="img">［ドローン全景］</div><div class="cap">上空からの全景（影・抜け確認）</div></div>
+    <div class="ph"><div class="img">［要注意箇所］</div><div class="cap">南東端 ケーブル垂れ</div></div>
+  </div>
+
+  <h2>4. 所見（要約）</h2>
+  <div class="note">
+    全体は健全な状態を維持。今回の主因は雑草で、本日の高刈りで解消済み。次月の発電量回復を確認します。
+    継続観察は2点：①南東端のケーブル固定（草刈り時の損傷予防）、②北側フェンス基礎の浮き（侵入対策）。
+    いずれも軽微なうちの対応を想定。電気設備の内部状態は本点検の対象外です（下記）。
+  </div>
+
+  <h2>5. 確認事項・次の一手</h2>
+  <ul class="next">
+    <li><span class="tag t-pro">専門家へ</span><b>接続箱/PCS内部・絶縁等の電気点検</b>は当方の対象外です。提携の<b>電気主任技術者</b>での精密点検をご検討ください（手配の取次可）。</li>
+    <li><span class="tag t-check">確認</span>南東端ケーブルの<b>固定処置</b>を行うか（簡易固定なら次回対応可、本格対応は電気工事店へ）。</li>
+    <li><span class="tag t-check">確認</span>北側フェンス基礎の<b>補修</b>を行うか（見積提出可）。</li>
+    <li><span class="tag t-watch">経過観察</span>次回（9月）に発電量回復・雑草再繁茂・ケーブル状態を再確認します。</li>
+  </ul>
+
+  <div class="disc">
+    ※本レポートは現地の目視・撮影・発電データに基づく現況のご報告です。電気設備内部の精密点検、性能保証、法令適合判定、売買・登記・境界の判断を行うものではありません。
+    記載は「推奨」ではなく確認事項・選択肢としてご提示しています。危険箇所・専門領域は有資格者（電気主任技術者・電気工事士等）への相談をお願いします。
+  </div>
+  <div class="foot">
+    <span>［サービス名（仮）］野立てドック ／ 担当：池田 ／ TEL ___-____-____ ／ mail ____@____</span>
+    <span>発行日 2026-06-30 ／ Report No. SAMPLE-001</span>
+  </div>
+
+</div>
+</body>
+</html>

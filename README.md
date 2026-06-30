@@ -8,6 +8,8 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 |---|---|
 | [strength-profile.md](research/strength-profile.md) | 強みプロファイル（引き継ぎメモから抽出）。事業選定の軸 |
 | [2026-06-30-supply-gap-market-research.md](research/2026-06-30-supply-gap-market-research.md) | **需要＞供給が明らかな市場リサーチ**（メイン成果物） |
+| [S1-solar-om-playbook.md](research/S1-solar-om-playbook.md) | **S1 太陽光O&M 具体化**（価格設計・営業先リスト・受注の流れ） |
+| [sample-report-solar.html](research/sample-report-solar.html) | 太陽光 現地点検レポートの**サンプル1枚**（ブラウザで開いてPDF化、営業の提示物） |
 
 ## 今の結論（2026-06-30）
 
