@@ -20,20 +20,31 @@ SYSTEM_PROMPT = """あなたはnote.com向けの記事編集者です。
 2. 導入（読者の課題に共感する2-3文）
 3. 本文（見出しを使い、具体的な手順やポイントを整理。文字起こしにある冗長な話し言葉は整理し、簡潔な文章にする）
 4. まとめ（次のアクションを促す1段落）
+5. 記事の最後に区切り線を入れ、「推奨ハッシュタグ」としてnoteでの発見性が高いタグを5〜8個提案する
 
 文字起こしに無い情報を捏造しないこと。話し言葉のフィラー（「えー」「あの」等）は削除すること。
 Markdown形式で出力してください。
 """
 
+PAID_ADDENDUM = """
+この記事は有料記事として販売します。以下の構成に変更してください:
+- 無料部分: 導入への共感 + この記事で得られる結果の提示 + 本文の冒頭（価値を感じさせるところまで）
+- 無料部分と有料部分の境界に「====== ここから有料 ======」という行を1つだけ入れる
+- 有料部分: 具体的な手順・ノウハウの全て + まとめ
+- 記事末尾に推奨販売価格をコメントで記載（例: <!-- 推奨価格: 500円 -->）
+無料部分だけ読んでも誠実で、かつ続きを読みたくなる構成にすること。
+"""
 
-def generate_article(transcript: str, model: str = "claude-opus-4-8") -> str:
+
+def generate_article(transcript: str, model: str = "claude-opus-4-8", paid: bool = False) -> str:
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
+    system = SYSTEM_PROMPT + (PAID_ADDENDUM if paid else "")
     with client.messages.stream(
         model=model,
         max_tokens=4096,
         thinking={"type": "adaptive"},
-        system=SYSTEM_PROMPT,
+        system=system,
         messages=[
             {"role": "user", "content": f"以下は動画の文字起こしです。これを元にnote記事を作成してください。\n\n{transcript}"}
         ],
@@ -49,10 +60,11 @@ def main():
     parser.add_argument("transcript", help="Path to transcript .txt file")
     parser.add_argument("--out", default="article.md", help="Path to write generated article")
     parser.add_argument("--model", default="claude-opus-4-8")
+    parser.add_argument("--paid", action="store_true", help="Structure the article for paid sale (free preview + paid section)")
     args = parser.parse_args()
 
     transcript = Path(args.transcript).read_text(encoding="utf-8")
-    article = generate_article(transcript, model=args.model)
+    article = generate_article(transcript, model=args.model, paid=args.paid)
 
     Path(args.out).write_text(article, encoding="utf-8")
     print(f"Article written to {args.out}")

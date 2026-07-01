@@ -11,6 +11,7 @@ from pathlib import Path
 
 from transcribe import download_audio, transcribe_audio
 from generate_article import generate_article
+from make_eyecatch import make_eyecatch
 from post_note import create_draft, split_title_body
 
 import os
@@ -26,6 +27,7 @@ def main():
     parser.add_argument("--whisper-model", default="small")
     parser.add_argument("--language", default="Japanese")
     parser.add_argument("--publish", action="store_true", help="Also create a note.com draft (requires NOTE_SESSION_COOKIE)")
+    parser.add_argument("--paid", action="store_true", help="Structure the article for paid sale (free preview + paid section)")
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
@@ -37,10 +39,16 @@ def main():
     transcript = txt_path.read_text(encoding="utf-8")
 
     print("Step 2/3: generating note article with Claude ...")
-    article = generate_article(transcript)
+    article = generate_article(transcript, paid=args.paid)
     article_path = out_dir / "article.md"
     article_path.write_text(article, encoding="utf-8")
     print(f"Article written to {article_path}")
+
+    try:
+        eyecatch_path = make_eyecatch(article_path, out_dir / "eyecatch.png")
+        print(f"Eyecatch written to {eyecatch_path}")
+    except Exception as exc:
+        print(f"Eyecatch skipped ({exc}); article is still usable")
 
     if args.publish:
         print("Step 3/3: creating note.com draft ...")

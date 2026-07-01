@@ -22,7 +22,7 @@ def download_audio(url: str, out_dir: Path) -> Path:
         url,
     ]
     subprocess.run(cmd, check=True)
-    downloaded = list(out_dir.glob("source.*"))
+    downloaded = [p for p in out_dir.glob("source.*") if p.suffix not in {".txt", ".md"}]
     if not downloaded:
         raise RuntimeError("yt-dlp did not produce an output file")
     return downloaded[0]

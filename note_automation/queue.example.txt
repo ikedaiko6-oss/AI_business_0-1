@@ -1,0 +1,6 @@
+# ネタ帳: 記事にしたいYouTube動画のURLを1行ずつ追加
+# 「#」始まりの行はメモとして無視されます
+# 処理済みURLは output/processed.txt に記録され、再実行時は自動スキップ
+
+# 例:
+# https://youtube.com/shorts/Ki7GBSJT9eE
