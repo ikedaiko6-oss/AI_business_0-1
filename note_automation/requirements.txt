@@ -1,0 +1,5 @@
+anthropic>=0.40.0
+yt-dlp>=2024.1.0
+openai-whisper
+requests
+python-dotenv
