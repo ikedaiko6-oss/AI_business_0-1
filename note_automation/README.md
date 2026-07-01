@@ -13,15 +13,22 @@ Claude Codeのリモートサンドボックスはネットワークポリシー
 ```bash
 cd note_automation
 pip install -r requirements.txt
-cp .env.example .env
-# .env を編集して ANTHROPIC_API_KEY を設定
 ```
 
 whisper と yt-dlp が使えることを確認してください（既にMac上で動作確認済みのはず）。
 
 ## 使い方
 
-### 1. 一括実行（推奨）
+### 0. 最速で1本通す（推奨）
+
+初回のみ依存インストール後、これを実行すると対話式でAPIキー・note Cookieを聞かれ、
+そのまま動画取得〜記事生成〜note下書き作成まで自動で完走します。
+
+```bash
+./run_pipeline.sh "https://youtube.com/shorts/xxxxx"
+```
+
+### 1. 手動で一括実行
 
 ```bash
 python main.py "https://youtube.com/shorts/xxxxx" --out-dir ./output
