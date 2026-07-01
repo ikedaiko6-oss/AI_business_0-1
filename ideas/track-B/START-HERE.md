@@ -19,8 +19,12 @@
 > その上で **B案＝〔上の1行〕** を「需要＞供給」の観点でガチリサーチし、`ideas/track-B/` 配下にまとめて。
 > A案（太陽光）は持ち込まない。このセッションはB専用で進めて。
 
-## 成果物の置き場
-- このフォルダ `ideas/track-B/` に `*.md` を作る（市場リサーチ → 具体化 → 保険/提携 → 検証ログ）。
+## 成果物の置き場（このフォルダ `ideas/track-B/`）
+- **市場リサーチ**: [2026-06-30-B-houtei-teiki-supply-gap.md](./2026-06-30-B-houtei-teiki-supply-gap.md)
+- **即金プレイブック（B4 管理不全空家 現況診断）**: [B4-akiya-shindan-playbook.md](./B4-akiya-shindan-playbook.md)
+- **本命の仕込み（B1 アスベスト提携）**: [B1-asbestos-partnership-setup.md](./B1-asbestos-partnership-setup.md)
+- **サンプル提示物**: [sample-report-akiya-shindan.html](./sample-report-akiya-shindan.html)（ブラウザで開いてPDF化）
+- 実行方針: **B4で今月の現金 × B1をチャネル共有で並行仕込み**（二段ロケット）。次は検証ログ（電話10件の反応）を追記していく。
 
 ## 比較は後で
 - A・B が出揃ったら `ideas/DECISION.md` を作り、同じものさし（TAM／供給ギャップ／強み適合／継続収益／初収益までの速さ／必要資金／資格の重さ／リスク）で採点して1本を選ぶ。

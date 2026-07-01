@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>空き家 現況診断レポート（管理不全リスク診断・サンプル）</title>
+<style>
+  :root{
+    --ink:#1f2937; --sub:#6b7280; --line:#e5e7eb; --bg:#f8fafc;
+    --brand:#4d7c0f; --brand-d:#3f6212;
+    --ok:#15803d; --okbg:#dcfce7; --warn:#b45309; --warnbg:#fef3c7; --bad:#b91c1c; --badbg:#fee2e2;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,system-ui,sans-serif;
+       color:var(--ink); background:#e5e7eb; margin:0; padding:24px; line-height:1.55;}
+  .sheet{width:210mm; min-height:297mm; margin:0 auto; background:#fff; padding:14mm 14mm 12mm;
+         box-shadow:0 4px 24px rgba(0,0,0,.15);}
+  .head{display:flex; justify-content:space-between; align-items:flex-start;
+        border-bottom:3px solid var(--brand); padding-bottom:10px;}
+  .title{font-size:21px; font-weight:800; letter-spacing:.02em;}
+  .title small{display:block; font-size:11px; color:var(--sub); font-weight:600; margin-top:2px;}
+  .logo{text-align:right; font-size:12px; color:var(--brand-d); font-weight:700;}
+  .logo .svc{font-size:15px;}
+  .logo .tag{font-size:10px; color:var(--sub); font-weight:500;}
+  .meta{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line);
+        border:1px solid var(--line); margin:12px 0 4px;}
+  .meta div{background:#fff; padding:6px 9px; font-size:11px;}
+  .meta .k{color:var(--sub); font-size:9.5px; display:block; margin-bottom:1px;}
+  .meta .v{font-weight:700;}
+  h2{font-size:13px; margin:16px 0 7px; padding-left:9px; border-left:5px solid var(--brand); color:var(--brand-d);}
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+  .kpi{border:1px solid var(--line); border-radius:8px; padding:9px 10px; background:var(--bg);}
+  .kpi .lab{font-size:10px; color:var(--sub);}
+  .kpi .num{font-size:18px; font-weight:800; margin-top:2px;}
+  .kpi .num span{font-size:11px; font-weight:600; color:var(--sub);}
+  .kpi.good .num{color:var(--ok);} .kpi.warn .num{color:var(--warn);} .kpi.bad .num{color:var(--bad);}
+  table{width:100%; border-collapse:collapse; font-size:11px;}
+  th,td{border:1px solid var(--line); padding:5px 8px; text-align:left; vertical-align:top;}
+  th{background:#f1f5f9; font-weight:700; color:#334155;}
+  td.item{font-weight:700; width:22%;}
+  .badge{display:inline-block; font-size:10px; font-weight:800; padding:2px 8px; border-radius:999px; white-space:nowrap;}
+  .b-ok{color:var(--ok); background:var(--okbg);}
+  .b-warn{color:var(--warn); background:var(--warnbg);}
+  .b-bad{color:var(--bad); background:var(--badbg);}
+  .photos{display:grid; grid-template-columns:repeat(4,1fr); gap:8px;}
+  .ph{border:1px solid var(--line); border-radius:8px; overflow:hidden;}
+  .ph .img{height:74px; background:repeating-linear-gradient(45deg,#eef2f7,#eef2f7 8px,#e6ebf2 8px,#e6ebf2 16px);
+           display:flex; align-items:center; justify-content:center; color:#94a3b8; font-size:10px;}
+  .ph .cap{font-size:9.5px; padding:4px 6px; color:#475569; background:#fff;}
+  .note{font-size:11px; background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:9px 11px;}
+  .next{font-size:11px;}
+  .next li{margin:3px 0;}
+  .next .tag{display:inline-block; font-size:9px; font-weight:800; padding:1px 6px; border-radius:4px; margin-right:6px;}
+  .t-check{background:#e0f2fe; color:#075985;} .t-pro{background:#fef3c7; color:#92400e;} .t-watch{background:#f3e8ff; color:#6b21a8;}
+  .risk{font-size:10.5px; background:#fff7ed; border:1px solid #fed7aa; border-radius:8px; padding:8px 11px; margin-top:6px;}
+  .disc{font-size:9px; color:var(--sub); border-top:1px solid var(--line); margin-top:14px; padding-top:8px;}
+  .foot{display:flex; justify-content:space-between; font-size:10px; color:var(--sub); margin-top:6px;}
+  .stamp{color:#b91c1c; border:1px dashed #b91c1c; border-radius:6px; padding:2px 6px; font-weight:700; font-size:9px;}
+  @media print{ body{background:#fff; padding:0;} .sheet{box-shadow:none; width:auto; min-height:auto;} }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="head">
+    <div class="title">空き家 現況診断レポート
+      <small>Vacant House Condition Report ／ 管理不全リスク診断・是正の判断材料</small>
+    </div>
+    <div class="logo">
+      <div class="svc">［サービス名（仮）］空き家ドック</div>
+      <div class="tag">現場 × AIレポート ／ 春日井市拠点・愛知岐阜三重対応</div>
+      <div class="stamp" style="margin-top:6px;">SAMPLE / 記入例</div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div><span class="k">物件名</span><span class="v">春日井市〇〇町 空き家（相続）</span></div>
+    <div><span class="k">所在地</span><span class="v">愛知県春日井市〇〇町2-4</span></div>
+    <div><span class="k">構造 / 築年</span><span class="v">木造2階 / 築約45年</span></div>
+    <div><span class="k">敷地 / 延床</span><span class="v">約 165㎡ / 約 92㎡</span></div>
+    <div><span class="k">診断日 / 天候</span><span class="v">2026-06-28（晴・29℃）</span></div>
+    <div><span class="k">診断区分</span><span class="v">現況診断（初回・遠方相続人向け）</span></div>
+    <div><span class="k">診断者</span><span class="v">池田</span></div>
+    <div><span class="k">次回目安</span><span class="v">是正後 or 3〜6ヶ月</span></div>
+  </div>
+
+  <h2>1. 管理不全リスク サマリー</h2>
+  <div class="kpis">
+    <div class="kpi warn"><div class="lab">総合の状態</div><div class="num">中 <span>／要是正あり</span></div></div>
+    <div class="kpi bad"><div class="lab">要対応</div><div class="num">3 <span>項目</span></div></div>
+    <div class="kpi warn"><div class="lab">要観察</div><div class="num">3 <span>項目</span></div></div>
+    <div class="kpi good"><div class="lab">良好</div><div class="num">4 <span>項目</span></div></div>
+  </div>
+  <div class="risk">
+    <b>着眼点：</b>改正空家法（2023.12施行）では、市区町村が「管理不全空家」と判断し<b>勧告</b>すると、土地の<b>住宅用地特例が解除</b>され固定資産税が上がり得ます。本診断は、その判断につながりやすい現況（雑草・破損・ごみ・傾き等）を<b>先に把握・是正するための材料</b>です。<b>認定の可否は自治体の判断であり、本書はそれを断定するものではありません。</b>
+  </div>
+
+  <h2>2. 現況チェック（10項目）</h2>
+  <table>
+    <tr><th>点検項目</th><th>判定</th><th>所見</th></tr>
+    <tr><td class="item">屋根・雨樋</td><td><span class="badge b-warn">要観察</span></td><td>棟板金の一部に浮き。雨樋に土砂・落葉の堆積。落下・雨漏りの前兆。</td></tr>
+    <tr><td class="item">外壁・軒</td><td><span class="badge b-ok">良好</span></td><td>大きな剥離・ひび割れなし。塗装の褪色はあるが構造影響は軽微。</td></tr>
+    <tr><td class="item">建具・開口部</td><td><span class="badge b-bad">要対応</span></td><td>北側掃き出し窓のガラス1枚に割れ。**侵入・飛散リスク**。早期の板張り/交換を。</td></tr>
+    <tr><td class="item">雑草・樹木</td><td><span class="badge b-bad">要対応</span></td><td>敷地全面で草丈50〜80cm。庭木が越境ぎみ。**近隣苦情・勧告の典型要因**。本日 一次草刈り可。</td></tr>
+    <tr><td class="item">ごみ・害虫</td><td><span class="badge b-warn">要観察</span></td><td>玄関前に不法投棄のごみ袋2点。床下・軒に蜂の巣なし。投棄は早期撤去を。</td></tr>
+    <tr><td class="item">傾き・構造</td><td><span class="badge b-ok">良好</span></td><td>目視・水平器で明らかな傾き・沈下は確認できず（簡易確認）。</td></tr>
+    <tr><td class="item">雨漏り・室内</td><td><span class="badge b-warn">要観察</span></td><td>2階天井にうっすら雨染み。屋根・雨樋と関連の可能性。要経過観察。</td></tr>
+    <tr><td class="item">給排水・通水</td><td><span class="badge b-ok">良好</span></td><td>通水確認、明らかな漏れ・悪臭なし。止水栓位置を記録。</td></tr>
+    <tr><td class="item">敷地・越境</td><td><span class="badge b-bad">要対応</span></td><td>ブロック塀が隣地側へ約2cm傾斜、庭木枝が越境。**近隣トラブルの芽**。※境界の断定はしません。</td></tr>
+    <tr><td class="item">防犯・施錠</td><td><span class="badge b-ok">良好</span></td><td>玄関・勝手口 施錠OK。割れ窓の応急封鎖を推奨。</td></tr>
+  </table>
+
+  <h2>3. 現地写真</h2>
+  <div class="photos">
+    <div class="ph"><div class="img">［全景］</div><div class="cap">建物全景（草刈り前）</div></div>
+    <div class="ph"><div class="img">［屋根/雨樋］</div><div class="cap">棟板金の浮き・雨樋堆積</div></div>
+    <div class="ph"><div class="img">［割れ窓］</div><div class="cap">北側 窓ガラス割れ</div></div>
+    <div class="ph"><div class="img">［雑草/越境］</div><div class="cap">草丈50〜80cm・庭木越境</div></div>
+  </div>
+
+  <h2>4. 所見（要約）</h2>
+  <div class="note">
+    建物本体（構造・外壁・給排水）は概ね維持されていますが、<b>雑草・割れ窓・投棄ごみ・越境</b>など「外から見て管理不全と受け取られやすい」項目が複数あります。
+    これらは<b>比較的低コスト・短時間で是正できる</b>もので、先に手を打てば近隣苦情や勧告のリスクを下げられます。
+    優先度の高い順に、下記の選択肢をご提示します（費用の目安は別途お見積り）。
+  </div>
+
+  <h2>5. 是正の選択肢と優先度・確認事項</h2>
+  <ul class="next">
+    <li><span class="tag t-check">最優先</span><b>草刈り・庭木の越境枝の処理</b>（近隣・勧告リスクの筆頭）。本日一次対応可、以後の定期見守りで維持。</li>
+    <li><span class="tag t-check">最優先</span><b>割れ窓の応急封鎖・ごみ撤去</b>（侵入・飛散・投棄誘発の防止）。※<b>残置物・ごみの運搬は許可業者へ手配</b>します。</li>
+    <li><span class="tag t-pro">専門家へ</span><b>棟板金・雨樋・雨染み</b>は雨漏りの前兆。<b>屋根/建築の専門業者</b>での点検をご検討ください（手配の取次可）。</li>
+    <li><span class="tag t-pro">専門家へ</span><b>ブロック塀の傾き・越境・境界</b>は、<b>測量/土地家屋調査士・専門業者</b>の領域です（当方は測量・境界の判断はしません）。</li>
+    <li><span class="tag t-watch">記録化</span>是正後に <b>before/after の「改善記録レポート」</b>を作成し、「適切に管理している記録」として保管をおすすめします。</li>
+    <li><span class="tag t-watch">選択肢</span>今後の方針（活用/賃貸/売却/解体）に応じ、<b>不動産・解体・空き家バンク等</b>の専門家へお繋ぎできます（仲介・登記は行いません）。</li>
+  </ul>
+
+  <div class="disc">
+    ※本レポートは現地の目視・撮影に基づく現況のご報告です。「管理不全空家」等の認定は市区町村の判断であり、本書がそれを断定・保証するものではありません。
+    不動産の売買仲介・登記・測量/境界確定・税額や法律の判断は行いません。記載は「推奨」ではなく確認事項・選択肢としてのご提示です。構造・電気・屋根・境界等の専門領域は各有資格者・専門業者へのご相談をお願いします。
+  </div>
+  <div class="foot">
+    <span>［サービス名（仮）］空き家ドック ／ 担当：池田 ／ TEL ___-____-____ ／ mail ____@____</span>
+    <span>発行日 2026-06-30 ／ Report No. SAMPLE-AKIYA-001</span>
+  </div>
+
+</div>
+</body>
+</html>
