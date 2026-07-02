@@ -12,6 +12,7 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [sample-report-solar.html](research/sample-report-solar.html) | 太陽光 現地点検レポートの**サンプル1枚**（ブラウザで開いてPDF化、営業の提示物） |
 | [S1-insurance-and-partners.md](research/S1-insurance-and-partners.md) | **賠償保険＆提携先**（必要な保険・相場、電気保安法人との補完提携、着手チェックリスト) |
 | [2026-07-02-untapped-supply-gap-deep-research.md](research/2026-07-02-untapped-supply-gap-deep-research.md) | **ディープリサーチ第2弾（C群/D群）**：「予算済み×人ゼロ」の行政市場（本命=森林経営管理の実務代行）＋ AI自動化型「ありそうでなかった」事業（レポート工場OEM等） |
+| [2026-07-02-C-gun-reality-check.md](research/2026-07-02-C-gun-reality-check.md) | **C群の発注実態検証**：金は動いている（活用464億円/年）×人は5倍不足×林野庁が「欲しがる市町村リスト」を公表。入口は委託でなく**地域林政アドバイザー雇用**が本命 |
 
 ## 今の結論（2026-06-30）
 
