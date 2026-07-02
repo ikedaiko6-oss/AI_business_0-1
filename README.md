@@ -12,6 +12,7 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [sample-report-solar.html](research/sample-report-solar.html) | 太陽光 現地点検レポートの**サンプル1枚**（ブラウザで開いてPDF化、営業の提示物） |
 | [S1-insurance-and-partners.md](research/S1-insurance-and-partners.md) | **賠償保険＆提携先**（必要な保険・相場、電気保安法人との補完提携、着手チェックリスト） |
 | [S1-competition-analysis.md](research/S1-competition-analysis.md) | **競合分析（正面＋斜め上）**：自動化・遠隔監視・卒FITの脅威と、それでも残る「長い尾×束ね」の活路 |
+| [2026-07-02-business-model-database.md](research/2026-07-02-business-model-database.md) | 外部ケース（起業家ポッドキャストの要約）から抽出した事業モデル5型のデータベース。他分野への転用検討用の素材（未検討・素材整理段階） |
 
 ## 今の結論（2026-06-30）
 
