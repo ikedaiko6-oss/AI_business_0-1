@@ -10,7 +10,8 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [2026-06-30-supply-gap-market-research.md](research/2026-06-30-supply-gap-market-research.md) | **需要＞供給が明らかな市場リサーチ**（メイン成果物） |
 | [S1-solar-om-playbook.md](research/S1-solar-om-playbook.md) | **S1 太陽光O&M 具体化**（価格設計・営業先リスト・受注の流れ） |
 | [sample-report-solar.html](research/sample-report-solar.html) | 太陽光 現地点検レポートの**サンプル1枚**（ブラウザで開いてPDF化、営業の提示物） |
-| [S1-insurance-and-partners.md](research/S1-insurance-and-partners.md) | **賠償保険＆提携先**（必要な保険・相場、電気保安法人との補完提携、着手チェックリスト） |
+| [S1-insurance-and-partners.md](research/S1-insurance-and-partners.md) | **賠償保険＆提携先**（必要な保険・相場、電気保安法人との補完提携、着手チェックリスト) |
+| [2026-07-02-untapped-supply-gap-deep-research.md](research/2026-07-02-untapped-supply-gap-deep-research.md) | **ディープリサーチ第2弾（C群/D群）**：「予算済み×人ゼロ」の行政市場（本命=森林経営管理の実務代行）＋ AI自動化型「ありそうでなかった」事業（レポート工場OEM等） |
 
 ## 今の結論（2026-06-30）
 
