@@ -54,8 +54,14 @@
 
 - 低圧太陽光発電所の正確な件数（全国・中京圏）は未確認。fit-portal.go.jpまたはe-stat.go.jpへローカル環境から直接アクセスして確認する必要がある
 - ハンディ型サーマルカメラの現在の実売価格は未確認
-- Phase 2（同業O&M業者へのツール販売）は仮説段階。実際にO&M業者にAI活用の知識・人材ギャップがあるかは、太陽光業界に特化した裏付けが取れていない（Model Cの77%/5%という数字は一般中小企業のものであり、O&M業界固有のデータではない）
 - ドローンを使う場合の飛行許可・保険等の実務要件は未整理
+
+### Phase 2（同業O&M業者へのツール販売）の裏付け状況（2026-07-04追記）
+
+- **人材不足は確認**: O&M技術者に求められるスキルが「電気主任技術者等の資格・IT(遠隔監視)・土木(草刈り)・物理(洗浄)」と多岐にわたり複雑すぎることが人材不足の一因と指摘されている¹¹。「AI・ロボティクス活用はもはや"あったら良い"ではなく"事業継続に必須"になっている」という記述もある¹¹。
+- **競合不在は確認（範囲内）**: 既存のAI点検製品（SOLAR CHECK、ドローンアイ、AI SolarPower on IDX等）は大規模発電所・需要予測・蓄電池まで含む大きなシステム向けで、「低圧中心の中小O&M業者向けの安価なAIレポートツール」というポジションの競合は検索範囲では見当たらなかった¹²。
+- **業界構造**: Smart Energy・develop等の大手数社が上位を占める一方、業界ランキング(Top60等)から中小のO&M業者も多数存在するとみられる¹³¹⁴。ただし正確な「低圧専門・中小業者の数」は未確認。
+- **残る限界**: Model Cの「77%が欲しいが5%しか使えていない」に相当する、**O&M業界固有の統計（O&M業者自身がAI導入を望んでいるが実行できていない、という直接的な調査データ）は見つからなかった**。人材不足とAIの必要性は別々の情報源からの確認であり、「同じ会社内で同時に起きている」ことの直接的な裏付けにはなっていない。
 
 ---
 
@@ -71,5 +77,9 @@
 8. DJI Mavic 3 Thermal 中古相場（Yahoo!オークション） https://auctions.yahoo.co.jp/closedsearch/closedsearch/dji%20mavic%203%20thermal/0/?rs=4
 9. FLIR Vue Pro R https://atcl-dsj.com/product/2378/
 10. FLIR ONE Edge Pro https://www.flir.com/products/flir-one-pro?vertical=condition+monitoring&segment=solutions
+11. O&M人材不足・多岐にわたる要求スキル（産総研福島／リニューアブル・ジャパン） https://www.aist.go.jp/fukushima/ja/pvom/ ／ https://www.rn-j.com/business/om/denken/solar-om-guide/
+12. AI SolarPower on IDX（大規模システム向けAI活用） https://www.idx.jp/aifactory/list/solar/
+13. 太陽光事業者ランキングTop60（Solisterra） https://www.solisterra.org/2025/07/top60.html
+14. 低圧中心のO&M業者比較（エナジービジョン） https://energyvision.tv/case/7648.html
 
 > 注: ドローン・サーマルカメラの価格は検索時点のもので変動しうる。実際の購入判断前に販売代理店で最新価格を確認すること。低圧太陽光の正確な件数データは未確認のため、事業化判断前に一次情報での再確認を推奨。
