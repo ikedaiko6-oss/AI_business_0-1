@@ -2,6 +2,12 @@
 
 AI を活用した 0→1 事業の検討・リサーチ置き場。
 
+## .claude/skills/
+
+| スキル | 内容 |
+|---|---|
+| [lean-coding](.claude/skills/lean-coding/SKILL.md) | **無駄のないコーディング原則集**。Torvalds・Carmack・Pike・Beck・Ousterhout・Metz・grug ら著名エンジニアの流儀のいいとこどり。コードを書く際に Claude Code が自動適用(`/lean-coding` で明示呼び出しも可) |
+
 ## research/
 
 | ファイル | 内容 |
