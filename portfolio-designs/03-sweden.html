@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案③｜北欧スカンジナビアン・ミニマル — ポートフォリオサンプル</title>
+<style>
+  :root{
+    --bg:#fbfaf7; --panel:#f2f0ea; --ink:#2c2b28; --sub:#87847c;
+    --sage:#8a9a86; --clay:#c88b6a; --line:#e4e1d8;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.85; font-weight:400;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 40px;}
+  .tag-sample{position:fixed; top:14px; right:14px; background:var(--sage); color:#fff;
+    font-size:11px; padding:5px 10px; letter-spacing:.05em; z-index:50; border-radius:3px;}
+
+  header .wrap{display:flex; justify-content:space-between; align-items:center; height:100px;}
+  .logo{font-size:19px; font-weight:600; letter-spacing:-.01em;}
+  .logo small{display:block; font-size:10px; color:var(--sub); font-weight:400; letter-spacing:.1em; margin-top:3px;}
+  nav{display:flex; gap:36px; font-size:13px; color:var(--sub);}
+  nav a:hover{color:var(--ink);}
+
+  .hero{padding:60px 0 140px;}
+  .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:60px; align-items:center;}
+  .hero .kicker{font-size:12px; letter-spacing:.15em; color:var(--sage); font-weight:600; margin-bottom:24px; text-transform:uppercase;}
+  .hero h1{font-size:46px; font-weight:300; letter-spacing:-.01em; line-height:1.35; color:var(--ink);}
+  .hero h1 b{font-weight:600;}
+  .hero p.lead{margin-top:24px; color:var(--sub); font-size:15px; max-width:420px;}
+  .hero .shape{position:relative; aspect-ratio:1/1; }
+  .hero .circle{position:absolute; border-radius:50%;}
+  .hero .c1{width:260px; height:260px; background:var(--panel); top:0; right:40px;}
+  .hero .c2{width:130px; height:130px; background:var(--clay); opacity:.85; bottom:10px; left:20px;}
+  .hero .c3{width:70px; height:70px; border:2px solid var(--sage); bottom:60px; right:0;}
+  .link-more{display:inline-flex; align-items:center; gap:8px; margin-top:36px; font-size:13.5px; font-weight:600;
+    border-bottom:1px solid var(--ink); padding-bottom:4px;}
+
+  .sec{padding:100px 0; border-top:1px solid var(--line);}
+  .sec-head{display:grid; grid-template-columns:1fr 2fr; gap:40px; margin-bottom:64px;}
+  .sec-head .label{font-size:12px; color:var(--sage); letter-spacing:.15em; text-transform:uppercase; font-weight:600;}
+  .sec-head h2{font-size:30px; font-weight:300; margin-top:10px;}
+  .sec-head p{color:var(--sub); font-size:14.5px; align-self:end;}
+
+  .about-grid{display:grid; grid-template-columns:280px 1fr; gap:60px;}
+  .about-grid .ph{aspect-ratio:4/5; background:var(--panel); position:relative;}
+  .about-grid .ph::before{content:""; position:absolute; inset:18px; border:1px solid var(--line);}
+  .about-grid .num-list{display:flex; gap:50px; margin-top:34px;}
+  .num-list b{font-size:28px; font-weight:300; display:block; color:var(--clay);}
+  .num-list span{font-size:11.5px; color:var(--sub); letter-spacing:.05em;}
+
+  .works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:44px 32px;}
+  .work .thumb{aspect-ratio:4/3; background:var(--panel); margin-bottom:20px; position:relative; overflow:hidden;}
+  .work:nth-child(1) .thumb::before{content:"";position:absolute; inset:0; background:var(--sage); opacity:.35;}
+  .work:nth-child(2) .thumb::before{content:"";position:absolute; inset:0; background:var(--clay); opacity:.3;}
+  .work:nth-child(3) .thumb::before{content:"";position:absolute; inset:0; background:#b7bfe0; opacity:.35;}
+  .work .meta{display:flex; justify-content:space-between; font-size:11px; color:var(--sub); letter-spacing:.05em; margin-bottom:8px; text-transform:uppercase;}
+  .work h3{font-size:17px; font-weight:500;}
+  .work p{font-size:13px; color:var(--sub); margin-top:6px;}
+
+  .services-list{border-top:1px solid var(--line);}
+  .srow{display:grid; grid-template-columns:60px 1fr 1fr; align-items:center; gap:20px; padding:28px 0; border-bottom:1px solid var(--line);}
+  .srow .idx{font-size:13px; color:var(--sage); font-weight:600;}
+  .srow h3{font-size:19px; font-weight:500;}
+  .srow p{font-size:13.5px; color:var(--sub);}
+
+  footer{background:var(--panel); padding:90px 0 40px;}
+  footer .wrap-inner{display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:70px;}
+  footer h2{font-size:34px; font-weight:300; max-width:460px; line-height:1.4;}
+  .cta-btn{background:var(--ink); color:var(--bg); font-size:13.5px; padding:16px 32px; border-radius:2px; font-weight:600;}
+  .foot-bottom{display:flex; justify-content:space-between; font-size:11.5px; color:var(--sub); padding-top:24px; border-top:1px solid var(--line);}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;} .hero h1{font-size:32px;} .about-grid{grid-template-columns:1fr;}
+    .works-grid{grid-template-columns:1fr;} .sec-head{grid-template-columns:1fr;}
+    .srow{grid-template-columns:1fr 1fr;} nav{display:none;} footer .wrap-inner{flex-direction:column; align-items:flex-start; gap:24px;}
+  }
+</style>
+</head>
+<body>
+<div class="tag-sample">SAMPLE 案③ 北欧ミニマル</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Nord & Co.<small>STUDIO NAME — 屋号が入ります</small></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Scandinavian Simplicity</div>
+      <h1>整理された美しさが、<br><b>信頼を静かに伝える。</b></h1>
+      <p class="lead">
+        余計な装飾を削ぎ落とし、機能と美をひとつにする北欧デザイン。
+        住宅・家具・インテリア・ライフスタイル系ブランドとの相性が良い構成です。
+      </p>
+      <a class="link-more" href="#work">実績を見る →</a>
+    </div>
+    <div class="shape">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">About</div><h2>私たちについて</h2></div>
+      <p>「機能美」を軸にしたデザインスタジオです。派手さより、暮らしや業務に自然に馴染む佇まいを大切にしています。</p>
+    </div>
+    <div class="about-grid">
+      <div class="ph"></div>
+      <div>
+        <p style="color:var(--sub); font-size:14.5px; max-width:520px;">
+          2012年の設立以来、家具メーカーやインテリアショップ、建築事務所など「暮らしの質」を扱うブランドのウェブサイトを手がけてきました。
+          写真の余白を活かし、情報量を絞ることで、ブランドそのものの上質さを伝えます。
+        </p>
+        <div class="num-list">
+          <div><b>12年</b><span>STUDIO HISTORY</span></div>
+          <div><b>140+</b><span>PROJECTS</span></div>
+          <div><b>4カ国</b><span>CLIENT REGIONS</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">Selected Work</div><h2>実績紹介</h2></div>
+      <p>写真・余白・タイポグラフィのバランスにこだわった制作事例です。</p>
+    </div>
+    <div class="works-grid">
+      <div class="work"><div class="thumb"></div><div class="meta"><span>Interior</span><span>2025</span></div><h3>家具ブランド ECサイト</h3><p>写真の余白を活かしたミニマルなプロダクトページ。</p></div>
+      <div class="work"><div class="thumb"></div><div class="meta"><span>Architecture</span><span>2024</span></div><h3>建築設計事務所</h3><p>作品集としても機能するポートフォリオ構成。</p></div>
+      <div class="work"><div class="thumb"></div><div class="meta"><span>Lifestyle</span><span>2024</span></div><h3>ライフスタイルブランド</h3><p>柔らかな配色と静かなアニメーションで魅せる一枚もの。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">Service</div><h2>ご提供内容</h2></div>
+      <p></p>
+    </div>
+    <div class="services-list">
+      <div class="srow"><span class="idx">01</span><h3>ブランド設計</h3><p>色・書体・トーンを含む一貫したビジュアル言語の設計。</p></div>
+      <div class="srow"><span class="idx">02</span><h3>Web デザイン</h3><p>余白を活かしたレイアウトとタイポグラフィ設計。</p></div>
+      <div class="srow"><span class="idx">03</span><h3>実装・運用</h3><p>軽量で読み込みの速い、長く使えるサイト構築。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="wrap-inner">
+      <h2>静かに、けれど確かに届くホームページを。</h2>
+      <a class="cta-btn" href="#">お問い合わせ →</a>
+    </div>
+    <div class="foot-bottom">
+      <span>© Nord & Co.（屋号見本）</span>
+      <span>Design Concept 03 — Scandinavian Minimal</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

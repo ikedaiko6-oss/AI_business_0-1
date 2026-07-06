@@ -2,6 +2,11 @@
 
 AI を活用した 0→1 事業の検討・リサーチ置き場。
 
+## portfolio-designs/
+
+パトさん経由のHP制作依頼に備えた、提案用デザインサンプル5種類（[一覧・詳細はこちら](portfolio-designs/README.md)）。
+日本向け1案＋海外（米・スウェーデン・イスラエル・アフリカ）参考の4案。`portfolio-designs/index.html` から一覧表示可能。
+
 ## research/
 
 | ファイル | 内容 |

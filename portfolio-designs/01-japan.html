@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案①｜和ミニマル（日本向け）— ポートフォリオサンプル</title>
+<style>
+  :root{
+    --paper:#f7f4ee; --paper-d:#efe9dd; --ink:#1c1c1c; --sub:#6b6558;
+    --indigo:#22344e; --indigo-d:#16223655; --seal:#a5322f; --line:#d8d0bd;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    background:var(--paper); color:var(--ink); line-height:1.9;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0,0,0,0.035) 1px, transparent 0);
+    background-size:22px 22px;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 32px;}
+
+  /* label badge for this doc */
+  .tag-sample{position:fixed; top:14px; right:14px; background:var(--seal); color:#fff;
+    font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:11px; padding:5px 10px;
+    letter-spacing:.1em; z-index:50; box-shadow:0 2px 8px rgba(0,0,0,.2);}
+
+  /* header */
+  header{position:sticky; top:0; background:rgba(247,244,238,.9); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line); z-index:10;}
+  header .wrap{display:flex; justify-content:space-between; align-items:center; height:76px;}
+  .logo{font-size:20px; letter-spacing:.15em; font-weight:600;}
+  .logo small{display:block; font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:9.5px;
+    letter-spacing:.2em; color:var(--sub); font-weight:400; margin-top:2px;}
+  nav{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:12.5px; letter-spacing:.1em;}
+  nav a{margin-left: 28px; color:var(--sub); border-bottom:1px solid transparent; padding-bottom:2px;}
+  nav a:hover{color:var(--ink); border-color:var(--seal);}
+
+  /* hero */
+  .hero{padding:100px 0 80px; position:relative; overflow:hidden;}
+  .hero .wrap{display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end;}
+  .hero .kicker{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:12px; letter-spacing:.35em;
+    color:var(--seal); margin-bottom:22px;}
+  .hero h1{font-size:52px; font-weight:600; letter-spacing:.06em; line-height:1.5;}
+  .hero h1 span{color:var(--indigo);}
+  .hero p.lead{margin-top:26px; font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:14.5px;
+    color:var(--sub); max-width:480px; line-height:2;}
+  .ensou{width:150px; height:150px; border-radius:50%; border:5px solid var(--seal); opacity:.85;
+    border-right-color:transparent; transform:rotate(35deg);}
+  .vert{writing-mode:vertical-rl; font-family:"Hiragino Mincho ProN",serif; font-size:13px;
+    letter-spacing:.5em; color:var(--sub); position:absolute; right:34px; top:110px;}
+
+  .divider{height:1px; background:linear-gradient(to right, transparent, var(--line) 20%, var(--line) 80%, transparent);}
+
+  /* section heading */
+  .sec{padding:90px 0;}
+  .sec-head{display:flex; align-items:baseline; gap:18px; margin-bottom:50px;}
+  .sec-head .no{font-size:13px; color:var(--seal); font-family:"Hiragino Kaku Gothic ProN",sans-serif; letter-spacing:.2em;}
+  .sec-head h2{font-size:28px; font-weight:600; letter-spacing:.15em;}
+  .sec-head .en{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:11px; color:var(--sub);
+    letter-spacing:.2em; margin-left:auto;}
+
+  /* about */
+  .about{display:grid; grid-template-columns:220px 1fr; gap:56px;}
+  .about .frame{aspect-ratio:3/4; background:var(--paper-d); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-family:"Hiragino Kaku Gothic ProN",sans-serif;
+    font-size:11px; color:var(--sub); letter-spacing:.1em;}
+  .about p{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:14px; color:#3a3a3a; margin-bottom:16px;}
+  .stats{display:flex; gap:40px; margin-top:28px;}
+  .stat b{font-size:26px; color:var(--indigo); display:block;}
+  .stat span{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:11px; color:var(--sub);}
+
+  /* works */
+  .works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .work{background:var(--paper); padding:34px 26px; transition:.25s;}
+  .work:hover{background:#fff;}
+  .work .num{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:10.5px; color:var(--seal); letter-spacing:.2em;}
+  .work h3{font-size:18px; margin:16px 0 10px; font-weight:600; letter-spacing:.05em;}
+  .work p{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:12.5px; color:var(--sub); line-height:1.8;}
+  .work .thumb{height:120px; margin-top:18px; background:
+    linear-gradient(135deg, var(--paper-d), #e3dcc9);
+    border:1px solid var(--line); position:relative;}
+  .work .thumb::after{content:"";position:absolute; inset:10px; border:1px solid rgba(34,52,78,.25);}
+
+  /* services */
+  .services{display:grid; grid-template-columns:repeat(4,1fr); gap:0; border-top:1px solid var(--line);}
+  .svc{padding:30px 22px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .svc:last-child{border-right:none;}
+  .svc .jp{font-size:17px; font-weight:600; letter-spacing:.08em;}
+  .svc .en{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:10px; color:var(--sub); letter-spacing:.15em; margin:6px 0 12px;}
+  .svc p{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:12px; color:var(--sub); line-height:1.8;}
+
+  /* contact / footer */
+  footer{background:var(--indigo); color:#f2efe6; padding:80px 0 40px;}
+  footer h2{font-size:30px; font-weight:600; letter-spacing:.1em; margin-bottom:20px;}
+  footer p{font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:13px; color:#c7cedb; max-width:460px; line-height:2;}
+  .cta{display:inline-block; margin-top:30px; font-family:"Hiragino Kaku Gothic ProN",sans-serif;
+    font-size:13px; letter-spacing:.15em; padding:15px 34px; border:1px solid #c7cedb; color:#f2efe6;}
+  .cta:hover{background:#f2efe6; color:var(--indigo);}
+  .foot-bottom{margin-top:70px; padding-top:24px; border-top:1px solid rgba(255,255,255,.15);
+    font-family:"Hiragino Kaku Gothic ProN",sans-serif; font-size:10.5px; color:#8b93a6;
+    display:flex; justify-content:space-between;}
+
+  @media(max-width:860px){
+    .hero h1{font-size:34px;} .about{grid-template-columns:1fr;} .works-grid{grid-template-columns:1fr;}
+    .services{grid-template-columns:1fr 1fr;} .vert{display:none;} nav{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="tag-sample">SAMPLE 案① 和ミニマル</div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">花 鳥 風 月<small>STUDIO NAME — 屋号が入ります</small></div>
+    <nav>
+      <a href="#about">プロフィール</a>
+      <a href="#works">実績</a>
+      <a href="#service">サービス</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="vert">静 寂 と 余 白 の 中 に 、 仕 事 を 語 る</div>
+  <div class="wrap">
+    <div>
+      <div class="kicker">JAPANESE MODERN CRAFT</div>
+      <h1>手仕事の確かさを、<br><span>静かに伝える</span>ホームページ。</h1>
+      <p class="lead">
+        余白と一本の線で魅せる、和のミニマルデザイン。老舗・工房・士業など、
+        「信頼」と「品格」を第一に伝えたい業種に向いた構成です。
+        写真は少なく、言葉と間（ま）で語ります。
+      </p>
+    </div>
+    <div class="ensou"></div>
+  </div>
+</section>
+<div class="divider wrap"></div>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">01</span><h2>プロフィール</h2><span class="en">ABOUT</span></div>
+    <div class="about">
+      <div class="frame">プロフィール<br>写真枠</div>
+      <div>
+        <p>屋号・代表者名・創業年など、信頼の裏付けとなる情報をここに配置します。長い実績や資格は、飾らず淡々と積み上げるように見せるのが和モダンの流儀です。</p>
+        <p>「何を作っているか」より先に「どんな姿勢で作っているか」を伝えることで、価格でなく人柄・技術で選ばれる導線をつくります。</p>
+        <div class="stats">
+          <div class="stat"><b>15</b><span>創業年数（年）</span></div>
+          <div class="stat"><b>320+</b><span>取引実績（件）</span></div>
+          <div class="stat"><b>98%</b><span>紹介継続率</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divider wrap"></div>
+
+<section class="sec" id="works">
+  <div class="wrap">
+    <div class="sec-head"><span class="no">02</span><h2>実績紹介</h2><span class="en">WORKS</span></div>
+    <div class="works-grid">
+      <div class="work"><div class="num">WORK 01</div><h3>老舗旅館 リニューアル</h3><p>創業80年の旅館サイトを、写真より「言葉」で魅せる構成に刷新。</p><div class="thumb"></div></div>
+      <div class="work"><div class="num">WORK 02</div><h3>陶芸工房 ブランドサイト</h3><p>作品一点ごとに背景の物語を添え、ファンとの継続的な関係を構築。</p><div class="thumb"></div></div>
+      <div class="work"><div class="num">WORK 03</div><h3>税理士事務所 コーポレート</h3><p>難しい専門性を、余白と平易な言葉で「相談しやすさ」に変換。</p><div class="thumb"></div></div>
+    </div>
+  </div>
+</section>
+<div class="divider wrap"></div>
+
+<section class="sec" id="service">
+  <div class="sec-head wrap"><span class="no">03</span><h2>ご提供内容</h2><span class="en">SERVICE</span></div>
+  <div class="services">
+    <div class="svc"><div class="jp">設計</div><div class="en">STRUCTURE</div><p>ヒアリングから情報設計・導線設計まで一貫して担当します。</p></div>
+    <div class="svc"><div class="jp">意匠</div><div class="en">DESIGN</div><p>和の余白感を基調に、業種ごとの品格を損なわないデザイン。</p></div>
+    <div class="svc"><div class="jp">実装</div><div class="en">BUILD</div><p>スマートフォン表示・表示速度・SEOの基礎を標準対応。</p></div>
+    <div class="svc"><div class="jp">運用</div><div class="en">SUPPORT</div><p>公開後の更新・保守・改善提案まで伴走します。</p></div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>お問い合わせ</h2>
+    <p>ホームページ制作・リニューアルのご相談はこちらから。<br>まずは現状のお悩みからお聞かせください。</p>
+    <a class="cta" href="#">お問い合わせフォームへ →</a>
+    <div class="foot-bottom">
+      <span>© STUDIO NAME（屋号見本）</span>
+      <span>Design Concept 01 — Japanese Modern / 和ミニマル</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

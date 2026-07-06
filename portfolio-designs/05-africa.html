@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案⑤｜アフリカン・ヴァイブラント — ポートフォリオサンプル</title>
+<style>
+  :root{
+    --sand:#fbf3e7; --ink:#2b1c12; --sub:#7a5f47;
+    --terra:#d9531e; --gold:#f4a827; --green:#1f6650; --plum:#7a2048; --panel:#fff8ee;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Arial,sans-serif;
+    background:var(--sand); color:var(--ink); line-height:1.75;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1100px; margin:0 auto; padding:0 32px;}
+  .tag-sample{position:fixed; top:14px; right:14px; background:var(--terra); color:#fff;
+    font-size:11px; font-weight:800; padding:5px 10px; letter-spacing:.05em; z-index:50; border-radius:6px;}
+
+  .pattern-strip{height:12px; background:repeating-linear-gradient(45deg, var(--terra) 0 14px, var(--gold) 14px 28px, var(--green) 28px 42px, var(--plum) 42px 56px);}
+
+  header .wrap{display:flex; justify-content:space-between; align-items:center; height:88px;}
+  .logo{font-size:22px; font-weight:900; letter-spacing:-.01em; color:var(--terra);}
+  .logo span{color:var(--ink);}
+  nav{display:flex; gap:30px; font-size:14px; font-weight:700;}
+  nav a:hover{color:var(--terra);}
+
+  .hero{padding:70px 0 60px; position:relative;}
+  .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center;}
+  .kicker{display:inline-block; background:var(--ink); color:var(--gold); font-weight:800; font-size:12px;
+    letter-spacing:.1em; padding:8px 16px; border-radius:999px; margin-bottom:24px;}
+  .hero h1{font-size:50px; font-weight:900; letter-spacing:-.02em; line-height:1.25;}
+  .hero h1 .hl{color:var(--terra);}
+  .hero p.lead{margin-top:22px; color:var(--sub); font-size:15.5px; max-width:460px; font-weight:600;}
+  .ctas{display:flex; gap:14px; margin-top:34px;}
+  .btn{background:var(--terra); color:#fff; font-weight:800; padding:15px 30px; border-radius:12px; font-size:14px; box-shadow:6px 6px 0 var(--ink);}
+  .btn:hover{transform:translate(-2px,-2px); box-shadow:8px 8px 0 var(--ink);}
+  .btn-outline{border:2.5px solid var(--ink); padding:15px 28px; border-radius:12px; font-weight:800; font-size:14px;}
+
+  .hero-art{position:relative; aspect-ratio:1/1;}
+  .hero-art .blob{position:absolute; border-radius:50%;}
+  .hero-art .b1{width:280px; height:280px; background:var(--gold); top:0; right:20px;}
+  .hero-art .b2{width:150px; height:150px; background:var(--green); bottom:20px; left:0;}
+  .hero-art .b3{width:90px; height:90px; background:var(--plum); bottom:0; right:60px;}
+  .hero-art .ring{position:absolute; width:340px; height:340px; border:3px dashed var(--terra); border-radius:50%; top:-10px; right:0;}
+
+  .sec{padding:90px 0;}
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:50px; flex-wrap:wrap; gap:16px;}
+  .sec-head .label{font-weight:800; color:var(--terra); font-size:13px; letter-spacing:.1em; text-transform:uppercase;}
+  .sec-head h2{font-size:34px; font-weight:900; margin-top:8px;}
+  .sec-head p{color:var(--sub); font-size:14px; max-width:380px; font-weight:600;}
+
+  .about-band{background:var(--ink); color:var(--sand); border-radius:28px; padding:60px; display:grid; grid-template-columns:220px 1fr; gap:50px; align-items:center;}
+  .about-band .ph{aspect-ratio:1/1; border-radius:20px; background:linear-gradient(135deg,var(--terra),var(--gold));}
+  .about-band p{color:#e7d9c6; font-size:15px; font-weight:600;}
+  .stats{display:flex; gap:44px; margin-top:26px;}
+  .stat b{font-size:30px; font-weight:900; display:block; color:var(--gold);}
+  .stat span{font-size:11.5px; color:#c9b79b; font-weight:700; letter-spacing:.04em;}
+
+  .works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .card{background:var(--panel); border:2.5px solid var(--ink); border-radius:20px; overflow:hidden; transition:.2s;}
+  .card:hover{transform:translateY(-6px);}
+  .card .thumb{height:150px; position:relative;}
+  .card:nth-child(1) .thumb{background:linear-gradient(135deg,var(--terra),var(--gold));}
+  .card:nth-child(2) .thumb{background:linear-gradient(135deg,var(--green),#3fa583);}
+  .card:nth-child(3) .thumb{background:linear-gradient(135deg,var(--plum),#a83a6c);}
+  .card .body{padding:22px;}
+  .card .cat{font-size:11px; font-weight:800; color:var(--terra); letter-spacing:.06em; text-transform:uppercase;}
+  .card h3{font-size:18px; font-weight:900; margin:8px 0 8px;}
+  .card p{font-size:13px; color:var(--sub); font-weight:600;}
+
+  .services{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .svc{background:var(--panel); border:2.5px solid var(--ink); border-radius:18px; padding:26px 20px; text-align:center;}
+  .svc .ic{width:52px; height:52px; border-radius:50%; margin:0 auto 16px;}
+  .svc:nth-child(1) .ic{background:var(--terra);}
+  .svc:nth-child(2) .ic{background:var(--gold);}
+  .svc:nth-child(3) .ic{background:var(--green);}
+  .svc:nth-child(4) .ic{background:var(--plum);}
+  .svc h3{font-size:16px; font-weight:900; margin-bottom:8px;}
+  .svc p{font-size:12.5px; color:var(--sub); font-weight:600;}
+
+  .cta-band{background:linear-gradient(120deg,var(--terra),var(--plum)); border-radius:28px; padding:70px 60px; text-align:center; color:#fff; margin:0 32px;}
+  .cta-band h2{font-size:36px; font-weight:900; margin-bottom:16px;}
+  .cta-band p{opacity:.9; margin-bottom:30px; font-weight:600;}
+  .cta-band .btn{background:var(--ink); box-shadow:6px 6px 0 rgba(255,255,255,.4);}
+
+  footer{padding:50px 32px 34px; display:flex; justify-content:space-between; font-size:12.5px; color:var(--sub); font-weight:700; margin-top:70px;}
+
+  @media(max-width:860px){
+    .hero .wrap{grid-template-columns:1fr;} .hero h1{font-size:34px;} .about-band{grid-template-columns:1fr; padding:36px;}
+    .works-grid{grid-template-columns:1fr;} .services{grid-template-columns:1fr 1fr;} nav{display:none;} .cta-band{padding:50px 26px;}
+  }
+</style>
+</head>
+<body>
+<div class="tag-sample">SAMPLE 案⑤ アフリカン・ヴァイブラント</div>
+<div class="pattern-strip"></div>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Jua<span>Studio</span></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">MADE WITH ENERGY</div>
+      <h1>色と力強さで、<br><span class="hl">記憶に残る</span>ブランドへ。</h1>
+      <p class="lead">
+        鮮やかな色彩と力強いタイポグラフィで、見る人の心を動かすデザイン。
+        飲食・アパレル・イベント・NPOなど、「熱量」を伝えたいブランドに向いた構成です。
+      </p>
+      <div class="ctas">
+        <a class="btn" href="#contact">相談してみる</a>
+        <a class="btn-outline" href="#work">実績を見る</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring"></div>
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">About</div><h2>私たちについて</h2></div>
+      <p>色と物語で、ブランドの熱量をそのまま届けるデザインスタジオです。</p>
+    </div>
+    <div class="about-band">
+      <div class="ph"></div>
+      <div>
+        <p>各地の色彩文化からインスピレーションを得た、力強く温かみのあるデザインを得意としています。派手さの中にも一貫したブランドの軸を通すことを大切にしています。</p>
+        <div class="stats">
+          <div class="stat"><b>200+</b><span>制作実績</span></div>
+          <div class="stat"><b>18</b><span>対応業種</span></div>
+          <div class="stat"><b>92%</b><span>継続発注率</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">Selected Work</div><h2>実績紹介</h2></div>
+      <p>色とストーリーで魅せる、印象に残るブランド展開の事例です。</p>
+    </div>
+    <div class="works-grid">
+      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">Restaurant</div><h3>エスニック料理店 ブランディング</h3><p>store体験を象徴する鮮やかなビジュアルアイデンティティ。</p></div></div>
+      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">Apparel</div><h3>アパレルブランド ECサイト</h3><p>テキスタイル柄を活かした世界観のあるオンラインストア。</p></div></div>
+      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">NPO</div><h3>国際協力団体 サイト刷新</h3><p>活動の熱量を伝え、寄付・参加につながる導線を設計。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="service">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">Service</div><h2>ご提供内容</h2></div>
+    </div>
+    <div class="services">
+      <div class="svc"><div class="ic"></div><h3>ブランディング</h3><p>色・柄・言葉を含む世界観の設計。</p></div>
+      <div class="svc"><div class="ic"></div><h3>Webデザイン</h3><p>熱量を保ったまま伝わるレイアウト設計。</p></div>
+      <div class="svc"><div class="ic"></div><h3>コンテンツ制作</h3><p>写真・イラスト・コピーの一体制作。</p></div>
+      <div class="svc"><div class="ic"></div><h3>運用サポート</h3><p>公開後の更新・キャンペーン展開まで伴走。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="cta-band">
+    <h2>あなたのブランドに、色と熱量を。</h2>
+    <p>まずは30分、現状のブランドについてお聞かせください。</p>
+    <a class="btn" href="#">相談してみる →</a>
+  </div>
+</section>
+
+<footer>
+  <span>© JuaStudio（屋号見本）</span>
+  <span>Design Concept 05 — African Vibrant</span>
+</footer>
+
+</body>
+</html>

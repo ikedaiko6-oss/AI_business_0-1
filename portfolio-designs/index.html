@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ポートフォリオ デザイン案 5選 — ギャラリー</title>
+<style>
+  :root{--bg:#f5f5f2; --ink:#1a1a1a; --sub:#6b6b6b; --line:#e2e0da; --card:#fff;}
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.7;}
+  .wrap{max-width:1100px; margin:0 auto; padding:70px 32px 100px;}
+  header{margin-bottom:56px;}
+  header .eyebrow{font-size:12.5px; letter-spacing:.15em; color:#b0472e; font-weight:800; text-transform:uppercase;}
+  h1{font-size:34px; font-weight:900; margin:14px 0 16px;}
+  header p{color:var(--sub); font-size:15px; max-width:640px;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:26px; margin-top:50px;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:16px; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 2px 10px rgba(0,0,0,.03);}
+  .swatch{height:110px; position:relative;}
+  .s1{background:linear-gradient(135deg,#f7f4ee,#22344e);}
+  .s2{background:linear-gradient(135deg,#7c3aed,#ec4899,#f59e0b);}
+  .s3{background:linear-gradient(135deg,#f2f0ea,#8a9a86,#c88b6a);}
+  .s4{background:linear-gradient(135deg,#0a0e12,#37e6d3);}
+  .s5{background:linear-gradient(135deg,#d9531e,#f4a827,#1f6650);}
+  .card .body{padding:22px 22px 26px; flex:1; display:flex; flex-direction:column;}
+  .card .no{font-size:11.5px; font-weight:800; color:#b0472e; letter-spacing:.08em;}
+  .card h3{font-size:19px; font-weight:800; margin:8px 0 6px;}
+  .card .country{font-size:12px; color:var(--sub); font-weight:700; margin-bottom:12px;}
+  .card p{font-size:13px; color:var(--sub); flex:1; margin-bottom:18px;}
+  .card a{align-self:flex-start; font-size:13px; font-weight:800; color:var(--ink); border-bottom:2px solid #b0472e; padding-bottom:2px;}
+  .card a:hover{color:#b0472e;}
+  .note{margin-top:60px; padding:24px 26px; background:#fff; border:1px solid var(--line); border-radius:14px; font-size:13px; color:var(--sub);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Portfolio Design Proposals</div>
+    <h1>ポートフォリオ デザイン案 5選</h1>
+    <p>日本向けデザイン1案と、海外（アメリカ・スウェーデン・イスラエル・アフリカ）のWebトレンドを参考にした4案、
+    合計5種類のホームページ・デザイン案です。各カードから実物のサンプルページをご覧いただけます。</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <div class="swatch s1"></div>
+      <div class="body">
+        <div class="no">案 01</div>
+        <h3>和ミニマル</h3>
+        <div class="country">🇯🇵 日本向け</div>
+        <p>余白と一本の線で魅せる、静けさと品格を伝える構成。老舗・工房・士業など信頼重視の業種向け。</p>
+        <a href="01-japan.html">サンプルを見る →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="swatch s2"></div>
+      <div class="body">
+        <div class="no">案 02</div>
+        <h3>US ボールドSaaS</h3>
+        <div class="country">🇺🇸 アメリカ参考</div>
+        <p>大胆なタイポグラフィと鮮やかなグラデーションで魅せる、スタートアップ然としたインパクト重視の構成。</p>
+        <a href="02-usa.html">サンプルを見る →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="swatch s3"></div>
+      <div class="body">
+        <div class="no">案 03</div>
+        <h3>北欧ミニマル</h3>
+        <div class="country">🇸🇪 スウェーデン参考</div>
+        <p>機能美を軸にした、余白の効いたスカンジナビアンデザイン。住宅・家具・ライフスタイル系と好相性。</p>
+        <a href="03-sweden.html">サンプルを見る →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="swatch s4"></div>
+      <div class="body">
+        <div class="no">案 04</div>
+        <h3>スタートアップ・テック</h3>
+        <div class="country">🇮🇱 イスラエル参考</div>
+        <p>ダークトーン×ネオンアクセントで技術力を訴求する、テック・SaaS・研究開発企業向けの構成。</p>
+        <a href="04-israel.html">サンプルを見る →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="swatch s5"></div>
+      <div class="body">
+        <div class="no">案 05</div>
+        <h3>アフリカン・ヴァイブラント</h3>
+        <div class="country">🌍 アフリカ参考</div>
+        <p>鮮やかな色彩と力強いタイポグラフィで熱量を伝える。飲食・アパレル・イベント・NPO向け。</p>
+        <a href="05-africa.html">サンプルを見る →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="note">
+    ※ すべて商用ロゴ・実写真を使わないダミー構成（プレースホルダー）のデザインサンプルです。
+    実案件では、ヒアリング内容に応じて構成・配色・コピーを調整します。詳細は
+    <a href="README.md" style="color:#b0472e; font-weight:700;">README.md</a> を参照してください。
+  </div>
+</div>
+</body>
+</html>
