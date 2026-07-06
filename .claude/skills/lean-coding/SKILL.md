@@ -9,6 +9,8 @@ description: 無駄のないコーディング原則集(トークン消費の最
 無駄 = 今必要ないコード・複雑さ・抽象・最適化・大きすぎるdiff・浪費トークン。
 迷ったら「複雑性は悪魔 (complexity very, very bad — grug)」。足すより削る側に倒す。
 
+「何を書くか」の原則はこのスキル。「どの順番で動くか」は [fast-build](../fast-build/SKILL.md) を参照。
+
 ## 0. 基本姿勢 — この順番を守る
 
 **Make it work → Make it right → Make it fast.** (Kent Beck)
