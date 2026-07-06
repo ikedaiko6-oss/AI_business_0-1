@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>案⑤｜アフリカン・ヴァイブラント — ポートフォリオサンプル</title>
+<title>KIN Baraza｜マヤ暦占いカフェ（アフリカン・ヴァイブラント案）</title>
 <style>
   :root{
     --sand:#fbf3e7; --ink:#2b1c12; --sub:#7a5f47;
@@ -22,14 +22,14 @@
   header .wrap{display:flex; justify-content:space-between; align-items:center; height:88px;}
   .logo{font-size:22px; font-weight:900; letter-spacing:-.01em; color:var(--terra);}
   .logo span{color:var(--ink);}
-  nav{display:flex; gap:30px; font-size:14px; font-weight:700;}
+  nav{display:flex; gap:28px; font-size:14px; font-weight:700;}
   nav a:hover{color:var(--terra);}
 
   .hero{padding:70px 0 60px; position:relative;}
   .hero .wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:50px; align-items:center;}
   .kicker{display:inline-block; background:var(--ink); color:var(--gold); font-weight:800; font-size:12px;
     letter-spacing:.1em; padding:8px 16px; border-radius:999px; margin-bottom:24px;}
-  .hero h1{font-size:50px; font-weight:900; letter-spacing:-.02em; line-height:1.25;}
+  .hero h1{font-size:44px; font-weight:900; letter-spacing:-.02em; line-height:1.3;}
   .hero h1 .hl{color:var(--terra);}
   .hero p.lead{margin-top:22px; color:var(--sub); font-size:15.5px; max-width:460px; font-weight:600;}
   .ctas{display:flex; gap:14px; margin-top:34px;}
@@ -38,8 +38,9 @@
   .btn-outline{border:2.5px solid var(--ink); padding:15px 28px; border-radius:12px; font-weight:800; font-size:14px;}
 
   .hero-art{position:relative; aspect-ratio:1/1;}
-  .hero-art .blob{position:absolute; border-radius:50%;}
-  .hero-art .b1{width:280px; height:280px; background:var(--gold); top:0; right:20px;}
+  .hero-art .blob{position:absolute; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    text-align:center; font-weight:800; font-size:12px; color:#fff; padding:10px;}
+  .hero-art .b1{width:280px; height:280px; background:var(--gold); top:0; right:20px; color:var(--ink);}
   .hero-art .b2{width:150px; height:150px; background:var(--green); bottom:20px; left:0;}
   .hero-art .b3{width:90px; height:90px; background:var(--plum); bottom:0; right:60px;}
   .hero-art .ring{position:absolute; width:340px; height:340px; border:3px dashed var(--terra); border-radius:50%; top:-10px; right:0;}
@@ -47,23 +48,24 @@
   .sec{padding:90px 0;}
   .sec-head{display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:50px; flex-wrap:wrap; gap:16px;}
   .sec-head .label{font-weight:800; color:var(--terra); font-size:13px; letter-spacing:.1em; text-transform:uppercase;}
-  .sec-head h2{font-size:34px; font-weight:900; margin-top:8px;}
+  .sec-head h2{font-size:32px; font-weight:900; margin-top:8px;}
   .sec-head p{color:var(--sub); font-size:14px; max-width:380px; font-weight:600;}
 
   .about-band{background:var(--ink); color:var(--sand); border-radius:28px; padding:60px; display:grid; grid-template-columns:220px 1fr; gap:50px; align-items:center;}
   .about-band .ph{aspect-ratio:1/1; border-radius:20px; background:linear-gradient(135deg,var(--terra),var(--gold));}
   .about-band p{color:#e7d9c6; font-size:15px; font-weight:600;}
-  .stats{display:flex; gap:44px; margin-top:26px;}
-  .stat b{font-size:30px; font-weight:900; display:block; color:var(--gold);}
+  .stats{display:flex; gap:44px; margin-top:26px; flex-wrap:wrap;}
+  .stat b{font-size:28px; font-weight:900; display:block; color:var(--gold);}
   .stat span{font-size:11.5px; color:#c9b79b; font-weight:700; letter-spacing:.04em;}
 
   .works-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
   .card{background:var(--panel); border:2.5px solid var(--ink); border-radius:20px; overflow:hidden; transition:.2s;}
   .card:hover{transform:translateY(-6px);}
-  .card .thumb{height:150px; position:relative;}
+  .card .thumb{height:130px; position:relative; display:flex; align-items:flex-end; padding:14px;}
   .card:nth-child(1) .thumb{background:linear-gradient(135deg,var(--terra),var(--gold));}
   .card:nth-child(2) .thumb{background:linear-gradient(135deg,var(--green),#3fa583);}
   .card:nth-child(3) .thumb{background:linear-gradient(135deg,var(--plum),#a83a6c);}
+  .card .price{color:#fff; font-weight:900; font-size:17px;}
   .card .body{padding:22px;}
   .card .cat{font-size:11px; font-weight:800; color:var(--terra); letter-spacing:.06em; text-transform:uppercase;}
   .card h3{font-size:18px; font-weight:900; margin:8px 0 8px;}
@@ -73,37 +75,48 @@
   .svc{background:var(--panel); border:2.5px solid var(--ink); border-radius:18px; padding:26px 20px; text-align:center;}
   .svc .ic{width:52px; height:52px; border-radius:50%; margin:0 auto 16px;}
   .svc:nth-child(1) .ic{background:var(--terra);}
-  .svc:nth-child(2) .ic{background:var(--gold);}
-  .svc:nth-child(3) .ic{background:var(--green);}
-  .svc:nth-child(4) .ic{background:var(--plum);}
+  .svc:nth-child(2) .ic{background:#f3ead8; border:2.5px solid var(--ink);}
+  .svc:nth-child(3) .ic{background:#5b7fae;}
+  .svc:nth-child(4) .ic{background:var(--gold);}
+  .svc .seal{font-size:10.5px; font-weight:800; color:var(--sub); text-transform:uppercase; letter-spacing:.05em; margin-bottom:4px;}
   .svc h3{font-size:16px; font-weight:900; margin-bottom:8px;}
   .svc p{font-size:12.5px; color:var(--sub); font-weight:600;}
 
+  .voices{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .voice{background:var(--panel); border:2.5px solid var(--ink); border-radius:18px; padding:24px;}
+  .voice p{font-size:13.5px; color:var(--ink); font-weight:600; margin-bottom:14px; line-height:1.85;}
+  .voice .who{font-size:11.5px; color:var(--sub); font-weight:800; text-transform:uppercase; letter-spacing:.04em;}
+
   .cta-band{background:linear-gradient(120deg,var(--terra),var(--plum)); border-radius:28px; padding:70px 60px; text-align:center; color:#fff; margin:0 32px;}
-  .cta-band h2{font-size:36px; font-weight:900; margin-bottom:16px;}
+  .cta-band h2{font-size:34px; font-weight:900; margin-bottom:16px;}
   .cta-band p{opacity:.9; margin-bottom:30px; font-weight:600;}
   .cta-band .btn{background:var(--ink); box-shadow:6px 6px 0 rgba(255,255,255,.4);}
 
-  footer{padding:50px 32px 34px; display:flex; justify-content:space-between; font-size:12.5px; color:var(--sub); font-weight:700; margin-top:70px;}
+  footer{padding:70px 32px 34px; margin-top:70px;}
+  .info-row{max-width:1036px; margin:0 auto 40px; display:flex; gap:60px; flex-wrap:wrap;}
+  .info-row .k{font-size:11px; font-weight:800; color:var(--terra); letter-spacing:.08em; text-transform:uppercase; margin-bottom:8px;}
+  .info-row .v{font-size:13.5px; color:var(--ink); font-weight:700; line-height:1.8;}
+  .foot-bottom{max-width:1036px; margin:0 auto; display:flex; justify-content:space-between; font-size:12.5px; color:var(--sub); font-weight:700; padding-top:24px; border-top:2px solid var(--ink);}
 
   @media(max-width:860px){
-    .hero .wrap{grid-template-columns:1fr;} .hero h1{font-size:34px;} .about-band{grid-template-columns:1fr; padding:36px;}
-    .works-grid{grid-template-columns:1fr;} .services{grid-template-columns:1fr 1fr;} nav{display:none;} .cta-band{padding:50px 26px;}
+    .hero .wrap{grid-template-columns:1fr;} .hero h1{font-size:32px;} .about-band{grid-template-columns:1fr; padding:36px;}
+    .works-grid{grid-template-columns:1fr;} .services{grid-template-columns:1fr 1fr;} .voices{grid-template-columns:1fr;}
+    nav{display:none;} .cta-band{padding:50px 26px;} .info-row{gap:28px;}
   }
 </style>
 </head>
 <body>
-<div class="tag-sample">SAMPLE 案⑤ アフリカン・ヴァイブラント</div>
+<div class="tag-sample">SAMPLE 案⑤ アフリカン・ヴァイブラント × マヤ暦占いカフェ</div>
 <div class="pattern-strip"></div>
 
 <header>
   <div class="wrap">
-    <div class="logo">Jua<span>Studio</span></div>
+    <div class="logo">KIN<span> Baraza</span></div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#service">Service</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">物語</a>
+      <a href="#work">占いメニュー</a>
+      <a href="#service">紋章と一杯</a>
+      <a href="#contact">ご予約</a>
     </nav>
   </div>
 </header>
@@ -111,22 +124,22 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="kicker">MADE WITH ENERGY</div>
-      <h1>色と力強さで、<br><span class="hl">記憶に残る</span>ブランドへ。</h1>
+      <div class="kicker">GATHER AROUND THE CALENDAR</div>
+      <h1>暦を囲み、<br><span class="hl">物語</span>を交わす場所。</h1>
       <p class="lead">
-        鮮やかな色彩と力強いタイポグラフィで、見る人の心を動かすデザイン。
-        飲食・アパレル・イベント・NPOなど、「熱量」を伝えたいブランドに向いた構成です。
+        「バラザ」とは、人々が輪になって話を交わす集いの場のこと。KIN Barazaは、マヤの暦
+        「ツォルキン」が刻む260日・20の紋章・13の音を、一杯の飲み物とともに語り合う占いカフェです。
       </p>
       <div class="ctas">
-        <a class="btn" href="#contact">相談してみる</a>
-        <a class="btn-outline" href="#work">実績を見る</a>
+        <a class="btn" href="#contact">鑑定を予約する</a>
+        <a class="btn-outline" href="#work">メニューを見る</a>
       </div>
     </div>
     <div class="hero-art">
       <div class="ring"></div>
-      <div class="blob b1"></div>
-      <div class="blob b2"></div>
-      <div class="blob b3"></div>
+      <div class="blob b1">260日の環</div>
+      <div class="blob b2">20紋章</div>
+      <div class="blob b3">13音</div>
     </div>
   </div>
 </section>
@@ -134,17 +147,19 @@
 <section class="sec" id="about">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="label">About</div><h2>私たちについて</h2></div>
-      <p>色と物語で、ブランドの熱量をそのまま届けるデザインスタジオです。</p>
+      <div><div class="label">物語</div><h2>KIN Barazaについて</h2></div>
+      <p>色と語りで、遠いマヤの暦を身近な一杯に変える占いカフェです。</p>
     </div>
     <div class="about-band">
       <div class="ph"></div>
       <div>
-        <p>各地の色彩文化からインスピレーションを得た、力強く温かみのあるデザインを得意としています。派手さの中にも一貫したブランドの軸を通すことを大切にしています。</p>
+        <p>大陸をまたいで受け継がれてきた「暦を囲んで語り合う」文化に惹かれ、マヤの暦を輪になって
+          分かち合う場としてKIN Barazaを開きました。難しい専門用語より、あなたの紋章の物語を
+          一杯のドリンクとともに味わうことを大切にしています。</p>
         <div class="stats">
-          <div class="stat"><b>200+</b><span>制作実績</span></div>
-          <div class="stat"><b>18</b><span>対応業種</span></div>
-          <div class="stat"><b>92%</b><span>継続発注率</span></div>
+          <div class="stat"><b>260</b><span>ツォルキン暦の周期（日）</span></div>
+          <div class="stat"><b>20</b><span>紋章の種類</span></div>
+          <div class="stat"><b>3,600+</b><span>これまでの来店数</span></div>
         </div>
       </div>
     </div>
@@ -154,13 +169,13 @@
 <section class="sec" id="work">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="label">Selected Work</div><h2>実績紹介</h2></div>
-      <p>色とストーリーで魅せる、印象に残るブランド展開の事例です。</p>
+      <div><div class="label">占いメニュー</div><h2>3つの鑑定プラン</h2></div>
+      <p>生年月日を伝えるだけで、その場でKIN・紋章・音を紐解きます。</p>
     </div>
     <div class="works-grid">
-      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">Restaurant</div><h3>エスニック料理店 ブランディング</h3><p>store体験を象徴する鮮やかなビジュアルアイデンティティ。</p></div></div>
-      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">Apparel</div><h3>アパレルブランド ECサイト</h3><p>テキスタイル柄を活かした世界観のあるオンラインストア。</p></div></div>
-      <div class="card"><div class="thumb"></div><div class="body"><div class="cat">NPO</div><h3>国際協力団体 サイト刷新</h3><p>活動の熱量を伝え、寄付・参加につながる導線を設計。</p></div></div>
+      <div class="card"><div class="thumb"><span class="price">2,000円</span></div><div class="body"><div class="cat">15分・ドリンク付</div><h3>KINベーシック鑑定</h3><p>紋章と音の意味、今の時期に合う過ごし方をお伝えします。</p></div></div>
+      <div class="card"><div class="thumb"><span class="price">3,200円</span></div><div class="body"><div class="cat">30分・お二人様</div><h3>相性（絆）鑑定</h3><p>お二人のKINを重ね、支え合い方とすれ違いを読み解きます。</p></div></div>
+      <div class="card"><div class="thumb"><span class="price">4,200円</span></div><div class="body"><div class="cat">45分・グループ可</div><h3>年間サイクル鑑定</h3><p>13の音が巡る1年の物語と、迎える節目を一緒に眺めます。</p></div></div>
     </div>
   </div>
 </section>
@@ -168,28 +183,49 @@
 <section class="sec" id="service">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="label">Service</div><h2>ご提供内容</h2></div>
+      <div><div class="label">紋章と一杯</div><h2>4色に宿るドリンク</h2></div>
+      <p>紋章を巡る赤・白・青・黄の4色を、そのまま4杯に仕立てました。</p>
     </div>
     <div class="services">
-      <div class="svc"><div class="ic"></div><h3>ブランディング</h3><p>色・柄・言葉を含む世界観の設計。</p></div>
-      <div class="svc"><div class="ic"></div><h3>Webデザイン</h3><p>熱量を保ったまま伝わるレイアウト設計。</p></div>
-      <div class="svc"><div class="ic"></div><h3>コンテンツ制作</h3><p>写真・イラスト・コピーの一体制作。</p></div>
-      <div class="svc"><div class="ic"></div><h3>運用サポート</h3><p>公開後の更新・キャンペーン展開まで伴走。</p></div>
+      <div class="svc"><div class="ic"></div><div class="seal">赤い龍</div><h3>ハイビスカスティー</h3><p>始まりの紋章。鮮やかな赤の一杯。</p></div>
+      <div class="svc"><div class="ic"></div><div class="seal">白い風</div><h3>ジンジャーレモネード</h3><p>意思疎通の紋章。すっきり澄んだ一杯。</p></div>
+      <div class="svc"><div class="ic"></div><div class="seal">青い夜</div><h3>バタフライピーラテ</h3><p>直感の紋章。夜を映す青い一杯。</p></div>
+      <div class="svc"><div class="ic"></div><div class="seal">黄色い太陽</div><h3>ターメリックチャイ</h3><p>生命力の紋章。太陽色に輝く一杯。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label">声</div><h2>訪れた方々の声</h2></div>
+    </div>
+    <div class="voices">
+      <div class="voice"><p>「輪になって語るように鑑定してもらえたのが新鮮でした。堅苦しさが一切ないです。」</p><div class="who">20代・友人と来店</div></div>
+      <div class="voice"><p>「相性鑑定で家族と。それぞれの紋章の違いが分かって、喧嘩が減りました。」</p><div class="who">40代・家族で来店</div></div>
+      <div class="voice"><p>「色とりどりのドリンクが可愛くて、鑑定内容も含めて写真に残したくなる時間でした。」</p><div class="who">30代・一人利用</div></div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="contact">
   <div class="cta-band">
-    <h2>あなたのブランドに、色と熱量を。</h2>
-    <p>まずは30分、現状のブランドについてお聞かせください。</p>
-    <a class="btn" href="#">相談してみる →</a>
+    <h2>あなたの紋章を、輪になって聞きに来て。</h2>
+    <p>おひとりでも、グループでも。まずは席のご予約からどうぞ。</p>
+    <a class="btn" href="#">鑑定を予約する →</a>
   </div>
 </section>
 
 <footer>
-  <span>© JuaStudio（屋号見本）</span>
-  <span>Design Concept 05 — African Vibrant</span>
+  <div class="info-row">
+    <div><div class="k">営業時間</div><div class="v">11:00 – 20:00（月曜定休）</div></div>
+    <div><div class="k">ご予約</div><div class="v">当日鑑定は先着順／グループは要予約</div></div>
+    <div><div class="k">所在地</div><div class="v">◯◯市◯◯町4-5-6</div></div>
+  </div>
+  <div class="foot-bottom">
+    <span>© KIN Baraza（屋号見本）</span>
+    <span>Design Concept 05 — African Vibrant × Maya Calendar Café</span>
+  </div>
 </footer>
 
 </body>
