@@ -16,6 +16,7 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [2026-07-04-digital-analog-benriya-research.md](research/2026-07-04-digital-analog-benriya-research.md) | 「アナログ×デジタル何でも屋」構想の市場リサーチ。**結論: 供給ギャップではなく既存競合多数**（御用聞き系が中京圏で既に稼働中）。差別化の選択肢を整理。→ 見送り、S1に回帰 |
 | [S1-ai-inspection-equipment.md](research/S1-ai-inspection-equipment.md) | S1太陽光O&Mの差別化設計。北原孝彦氏の型＋クリス・コーナーの型（小さくテスト／コピー戦略／AI導入代行の営業手法）を組み込んだ「ガジェット武装型O&M」。ドローン・サーマルカメラの価格調査（おすすめTop5比較込み）、低圧発電所の物理規模を含む |
 | [S1-reverse-goal-plan.md](research/S1-reverse-goal-plan.md) | **ゴール逆算プラン（クリス式）**：月10万/50万/100万の必要契約数、1人の物理上限（約55〜145件）、上限を超える4レバー、90日テスト計画と撤退ゲート |
+| [S1-day0-14-execution-kit.md](research/S1-day0-14-execution-kit.md) | **Day 0〜14 実行キット**：機材購入先、接触先リスト50件の作り方と管理表、無料デモ点検チェックリスト、AIレポート生成プロンプトv1、KPI記録表 |
 
 ## 今の結論（2026-06-30）
 
