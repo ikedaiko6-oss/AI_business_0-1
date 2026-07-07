@@ -14,6 +14,7 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [S1-competition-analysis.md](research/S1-competition-analysis.md) | **競合分析（正面＋斜め上）**：自動化・遠隔監視・卒FITの脅威と、それでも残る「長い尾×束ね」の活路 |
 | [2026-07-06-100k-per-day-worldwide-map.md](research/2026-07-06-100k-per-day-worldwide-map.md) | **日給10万円の稼ぎ方 世界網羅マップ**：世界の約40方式を4つの型に分解し、実現可能なものをS/A/B/Cランク＋12ヶ月設計に落とし込み |
 | [hypothesis-log.md](research/hypothesis-log.md) | **事業仮説ログ**：`/new-hypothesis` スキルが11項目テンプレートでその場評価した仮説の記録一覧 |
+| [S1-30day-validation-log.md](research/S1-30day-validation-log.md) | **S1 30日検証 実行ログ**（2026-07-07開始）：電話10件リスト・トーク・週次集計と go/no-go 判定の記録簿 |
 
 ## 今の結論（2026-06-30）
 
