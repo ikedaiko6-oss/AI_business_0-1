@@ -13,6 +13,12 @@ AI を活用した 0→1 事業の検討・リサーチ置き場。
 | [S1-insurance-and-partners.md](research/S1-insurance-and-partners.md) | **賠償保険＆提携先**（必要な保険・相場、電気保安法人との補完提携、着手チェックリスト） |
 | [S1-competition-analysis.md](research/S1-competition-analysis.md) | **競合分析（正面＋斜め上）**：自動化・遠隔監視・卒FITの脅威と、それでも残る「長い尾×束ね」の活路 |
 
+## routine/
+
+| ファイル | 内容 |
+|---|---|
+| [personal-power-routine.md](routine/personal-power-routine.md) | **12週間アーク（7/7〜9/27）**：初受注を取るための日次ルーティーン・禁止事項・ロードマップ |
+
 ## 今の結論（2026-06-30）
 
 強みは「**現地に行って記録し、遠隔の意思決定者が判断できるAIレポートにする**」1つの能力。
