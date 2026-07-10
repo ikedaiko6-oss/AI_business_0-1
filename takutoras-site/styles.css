@@ -82,7 +82,8 @@ section[id] {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(251, 251, 253, 0.82);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   backdrop-filter: blur(20px) saturate(1.8);
   -webkit-backdrop-filter: blur(20px) saturate(1.8);
 }
@@ -115,7 +116,7 @@ section[id] {
 }
 
 .brand-name {
-  color: #f5f5f7;
+  color: var(--ink);
   font-size: 0.98rem;
   font-weight: 700;
   line-height: 1.2;
@@ -124,7 +125,7 @@ section[id] {
 
 .brand-name small {
   display: block;
-  color: rgba(245, 245, 247, 0.55);
+  color: var(--muted-2);
   font-size: 0.56rem;
   font-weight: 600;
   letter-spacing: 0.26em;
@@ -134,7 +135,7 @@ section[id] {
   display: flex;
   align-items: center;
   gap: clamp(16px, 2.4vw, 34px);
-  color: rgba(245, 245, 247, 0.8);
+  color: var(--ink-2);
   font-size: 0.76rem;
   font-weight: 400;
   white-space: nowrap;
@@ -145,7 +146,7 @@ section[id] {
 }
 
 .nav-links a:hover {
-  color: #fff;
+  color: var(--ink);
 }
 
 .nav-cta {
@@ -219,19 +220,18 @@ h3 {
 
 .eyebrow {
   display: block;
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   padding: 0;
-  color: var(--accent);
+  color: var(--muted);
   background: none;
   border: 0;
-  font-size: 0.86rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.98rem;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .eyebrow.inverse {
-  color: #66c8d8;
+  color: #a1a1a6;
 }
 
 /* ============ Sections ============ */
@@ -287,7 +287,7 @@ h3 {
 }
 
 .hero-copy .eyebrow {
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
 }
 
 .service-chips {
@@ -326,12 +326,12 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
-  padding: 12px 28px;
+  min-height: 44px;
+  padding: 0 24px;
   border: 0;
   border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.94rem;
+  font-weight: 400;
   transition: background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
 }
 
@@ -347,23 +347,11 @@ h3 {
 .btn-secondary {
   color: var(--accent);
   background: transparent;
-  padding-inline: 10px;
-}
-
-.btn-secondary::after {
-  content: "\203A";
-  margin-left: 7px;
-  font-size: 1.2em;
-  line-height: 1;
-  transition: transform 0.18s ease;
+  box-shadow: inset 0 0 0 1px var(--hairline);
 }
 
 .btn-secondary:hover {
-  color: var(--accent-deep);
-}
-
-.btn-secondary:hover::after {
-  transform: translateX(3px);
+  box-shadow: inset 0 0 0 1px var(--accent);
 }
 
 .hero-media {
@@ -378,7 +366,7 @@ h3 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--r-lg);
-  box-shadow: 0 40px 100px -40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .case-label {
@@ -405,7 +393,7 @@ h3 {
   padding: 28px;
   background: rgba(255, 255, 255, 0.92);
   border-radius: 22px;
-  box-shadow: 0 30px 80px -28px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 36px -14px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   text-align: left;
@@ -499,8 +487,8 @@ h3 {
 
 .case-card {
   position: relative;
-  width: min(1320px, calc(100vw - 24px));
-  margin: clamp(40px, 5vw, 60px) calc(50% - 50vw + 12px) 0;
+  width: 100vw;
+  margin: clamp(40px, 5vw, 60px) calc(50% - 50vw) 0;
 }
 
 .case-label.small {
@@ -515,7 +503,7 @@ h3 {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--r-lg);
-  box-shadow: 0 36px 90px -36px rgba(0, 0, 0, 0.38);
+  
 }
 
 .report-frame {
@@ -538,7 +526,7 @@ h3 {
   border-radius: 20px;
   color: var(--ink);
   font-size: 0.72rem;
-  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 12px 32px -14px rgba(0, 0, 0, 0.14);
 }
 
 .case-sample .mini-sheet {
@@ -903,7 +891,7 @@ h3 {
 .report-main .mini-sheet {
   padding: 30px;
   font-size: 0.76rem;
-  box-shadow: 0 34px 90px -32px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 14px 40px -16px rgba(0, 0, 0, 0.14);
 }
 
 .check-list {
@@ -1529,9 +1517,7 @@ h3 {
   color: #f5f5f7;
 }
 
-.case-section.dark .case-card img {
-  box-shadow: 0 36px 90px -30px rgba(0, 0, 0, 0.9);
-}
+
 
 /* ============ Apple v2: scroll reveal ============ */
 
