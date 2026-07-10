@@ -712,23 +712,24 @@
             <div class="contact-cards">
               <div><strong>対応エリア</strong><span>愛知・岐阜・三重</span></div>
               <div><strong>拠点</strong><span>愛知県春日井市</span></div>
-              <div><strong>連絡先</strong><span>電話・メールは準備中</span></div>
+              <div><strong>電話</strong><span><a href="tel:09067513032">090-6751-3032</a></span></div>
+              <div><strong>メール</strong><span><a href="mailto:takutoras@gmail.com">takutoras@gmail.com</a></span></div>
             </div>
           </div>
-          <form class="contact-form">
+          <form class="contact-form" id="contact-form">
             <label for="name">お名前</label>
-            <input id="name" type="text" placeholder="山田 太郎" />
+            <input id="name" name="name" type="text" placeholder="山田 太郎" required />
             <label for="type">ご相談内容</label>
-            <select id="type">
+            <select id="type" name="type">
               <option>太陽光発電所の現地確認について</option>
               <option>草刈り・除草のご相談</option>
               <option>協力業者としてのご連絡</option>
               <option>その他</option>
             </select>
             <label for="message">お問い合わせ内容</label>
-            <textarea id="message" placeholder="発電所の所在地・容量、ご相談内容などをご記入ください"></textarea>
-            <button type="button" disabled>送信準備中</button>
-            <p class="form-note">公開前のため、フォーム送信機能はまだ接続していません。</p>
+            <textarea id="message" name="message" placeholder="発電所の所在地・容量、ご相談内容などをご記入ください" required></textarea>
+            <button type="submit">お問い合わせ内容をメールで送る</button>
+            <p class="form-note">送信すると、入力内容を反映したメールがお使いのメールアプリで開きます（宛先：takutoras@gmail.com）。</p>
           </form>
         </div>
       </section>
@@ -783,6 +784,27 @@
             : 0;
           el.style.transitionDelay = Math.min(idx % 8, 5) * 70 + "ms";
           io.observe(el);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var form = document.getElementById("contact-form");
+        if (!form) return;
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var name = document.getElementById("name").value.trim();
+          var type = document.getElementById("type").value;
+          var message = document.getElementById("message").value.trim();
+          var subject = "【タクトラス お問い合わせ】" + type;
+          var body =
+            "お名前：" + name + "\n" +
+            "ご相談内容：" + type + "\n\n" +
+            message;
+          window.location.href =
+            "mailto:takutoras@gmail.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
         });
       })();
     </script>
