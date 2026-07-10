@@ -8,7 +8,7 @@
       name="description"
       content="タクトラスは、愛知県春日井市を拠点に、太陽光発電所の現地確認、発電量低下の原因確認、草刈り手配、写真付き報告書作成を行う管理窓口です。"
     />
-    <link rel="stylesheet" href="styles.css?v=20260710-apple-style" />
+    <link rel="stylesheet" href="styles.css?v=20260710-apple-v2" />
   </head>
   <body>
     <header class="site-header">
@@ -35,7 +35,7 @@
           <p class="eyebrow"><span class="keep">低圧太陽光発電所</span>の<span class="keep">現地管理窓口</span></p>
           <h1>
             <span class="h1-line"><span class="keep">現地に行けない場合でも、</span></span>
-            <span class="h1-line"><span class="keep">写真や動画で</span><span class="keep">現状を見える化。</span></span>
+            <span class="h1-line"><span class="keep">写真や動画で</span><span class="keep grad">現状を見える化。</span></span>
           </h1>
           <div class="service-chips" aria-label="対応業務の例">
             <span>現地確認</span>
@@ -127,7 +127,7 @@
         </div>
       </section>
 
-      <section id="case-partner" class="case-section muted" aria-label="専門家連携の業務例">
+      <section id="case-partner" class="case-section dark" aria-label="専門家連携の業務例">
         <div class="wrap case-inner">
           <div class="case-head">
             <p class="eyebrow">Case 03</p>
@@ -225,7 +225,7 @@
         </div>
       </section>
 
-      <section id="case-thermal" class="case-section muted" aria-label="サーマルカメラ撮影の業務例">
+      <section id="case-thermal" class="case-section dark" aria-label="サーマルカメラ撮影の業務例">
         <div class="wrap case-inner">
           <div class="case-head">
             <p class="eyebrow">Case 05</p>
@@ -672,5 +672,35 @@
         本サイトの報告書サンプルは構成説明のためのイメージです。タクトラスは電気設備内部の精密点検、性能保証、法令適合判定、不動産売買仲介、登記、境界確定を行いません。
       </div>
     </footer>
+    <script>
+      (function () {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var els = document.querySelectorAll(
+          ".section-head,.case-head,.hero-report-sample,.case-card,.case-sample,.case-report," +
+          ".audience-grid article,.risk-grid article,.why-grid article,.partner-grid article," +
+          ".process-list li,.check-list li,.proof-item,.inspection-table,.company-panel," +
+          ".faq-list details,.scope-card,.contact-form,.contact-cards div"
+        );
+        els.forEach(function (el) { el.classList.add("reveal"); });
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add("in");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
+        );
+        els.forEach(function (el) {
+          var idx = el.parentElement
+            ? Array.prototype.indexOf.call(el.parentElement.children, el)
+            : 0;
+          el.style.transitionDelay = Math.min(idx % 8, 5) * 70 + "ms";
+          io.observe(el);
+        });
+      })();
+    </script>
   </body>
 </html>
