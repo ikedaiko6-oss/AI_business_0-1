@@ -223,8 +223,29 @@ section[id],
   color: var(--accent);
 }
 
+.nav-veil {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.34s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.site-header:has(.nav-item:hover) .nav-veil,
+.site-header:has(.nav-item:focus-within) .nav-veil {
+  opacity: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .mega {
+  .mega,
+  .nav-veil {
     transition: none;
   }
 }
