@@ -20,7 +20,7 @@
 
 | 競合タイプ | 実態 | 脅威度 |
 |---|---|---|
-| **O&M専業者** | 比較サイトに**72社**が並ぶ。低圧O&Mは**月3,850円〜**の安値も。監視のみに切り替えてコストを削る動き | 高 |
+| **O&M専業者** | 比較サイトに**72社**が並ぶ。低圧O&Mは**月3,850円〜**の安値も。監視のみに切り替えてコストを削る動き。**実例（2026-07-17確認）：ユニバーサルエコロジー**（愛知・名古屋、97名、資本金4334万円）＝野立て個人オーナー向けに草刈り・パネル洗浄・点検・常時モニタリング・24時間365日出動無制限の緊急駆けつけ・オーナー向けレポートを自社完結でワンストップ提供中。タクトラスの「年間ライト」プランとメニュー構成がほぼ同一 | 高 |
 | **草刈り専門業者** | 1社で**年400MWの除草**を請け負う規模prayerも（丸瀬産業等）。スケールで単価を叩く | 高 |
 | **マッチングPF** | くらしのマーケット・ミツモアで草刈りが**相見積もり＝値崩れ**。1㎡50〜300円で比較される | 高（草刈り単体） |
 | **シルバー人材・造園・便利屋** | 草刈りの安値受け皿。地域に無数 | 中（草刈り単体） |
@@ -94,6 +94,7 @@
 - O&M市場の競争・72社比較・低圧の値付け https://www.oandm-shinsho.com/comparison/ ／ enegaeru（監視のみ化・O&M空洞化の指摘） https://www.enegaeru.com/completeanalysisofsolar-batteryoandmcosts ／ エナジービジョン（月3,850円〜） https://energyvision.tv/case/7648.html
 - 草刈りの値崩れ・マッチング くらしのマーケット https://curama.jp/mechanical-mowing/ ／ ミツモア https://meetsmore.com/services/cutting-grass ／ 400MV除草の専門業者 丸瀬産業 https://maruse-i.com/service/weeding/
 - 遠隔監視・現地削減 ユニバーサルエコロジー https://unieco.co.jp/monitoring/ ／ 次世代型O&M（コスト半減・点検削減） https://earthcom-eco.jp/column/investment/next-generation-operation-maintenance
+- （2026-07-17追記）ユニバーサルエコロジーのO&Mサービス詳細・直接競合の裏付け：会社概要（97名・資本金4334万円） https://unieco.co.jp/company/profile/ ／ O&M（保守・点検、野立て個人オーナー向け） https://unieco.co.jp/maintenance/ ／ 障害対応・緊急駆付け（24時間365日・出動無制限） https://unieco.co.jp/troubleshooting/ ／ 料金シミュレーター https://unieco.co.jp/contact/om_estimate/
 - ドローン×AI自動点検 Sensyn Robotics https://www.sensyn-robotics.com/solution/solarpanel ／ BLUERAY https://drone-blueray.com/ ／ 日本ランテック https://j-lantec.com/drone/ ／ 日経（素早く不具合特定） https://www.nikkei.com/article/DGXMZO26885030U8A210C1000000/
 - ロボット草刈機 和同産業（国産初ルンバ型） https://xtech.nikkei.com/dm/atcl/feature/15/356325/120500023/ ／ メガソーラービジネス https://project.nikkeibp.co.jp/ms/atcl/19/feature/00008/083100023/
 - 防草対策の費用比較 https://earthcom-eco.jp/column/investment/solar-power-weeding-cost ／ https://solsell.jp/taiyoukou-zassou/
