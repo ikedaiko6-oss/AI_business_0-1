@@ -133,7 +133,7 @@
 
 **B. O&M元請・保安（顧客 or 提携 ★1）**
 - タデック（常滑/愛知。IVカーブ・サーモ・PV検査車を保有＝**電気は強いが現場の手は欲しい**）⁸ https://tadec.co.jp/corporate-customer/o-m/
-- ユニバーサルエコロジー https://unieco.co.jp/maintenance/
+- ユニバーサルエコロジー https://unieco.co.jp/maintenance/ （**2026-07-17注記**：従業員97名・提携O&M会社約250社の中堅専業。O&Mは自社+ネットワークで既にワンストップ、`/partner`の協力会社募集は施工店向けで巡回・草刈りとは別枠。★1→★2相当に格下げ。詳細は`S1-30day-validation-log.md`#5参照）
 - C-Energy（中部電力グループ）／エネテク／ソラパト
 
 **C. 草刈り専門（競合／繁忙期の下請け受け先）**
